@@ -1,0 +1,8 @@
+---
+layout: default
+permalink: /blog/:year/:month/:day/:nth/:title
+---
+<article>
+  {{ content }}
+  <p>{{ page.author }} - <time datetime="{{ page.date }}">{{ page.date }}</time></p>
+</article>

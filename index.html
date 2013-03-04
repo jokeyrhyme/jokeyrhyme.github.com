@@ -1,0 +1,17 @@
+---
+layout: default
+title: jokeyrhy.me
+---
+{% for post in site.posts %}
+<article>
+  <header>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2><em>{{ post.subtitle }}</em></h2>
+  </header>
+  <p>{{ post.summary }}</p>
+  <footer>
+    <p><a href="{{ post.url }}">read more here...</a></p>
+    <p>{{ post.author }} - <time datetime="{{ post.date }}">{{ post.date }}</time></p>
+  </footer>
+</article>
+{% endfor %}
