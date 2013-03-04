@@ -4,8 +4,7 @@ title: GitHub Pages
 subtitle: getting to know Doctor Jekyll
 date: 2013-03-04
 permalink: /blog/2013/03/04/2/github_pages.html
-summary: A brief justification for selecting GitHub Pages as my blog
-hosting system, and a quick rundown of how I've used it.
+summary: A brief justification for selecting GitHub Pages as my blog hosting system, and a quick rundown of how I've used it.
 author: Ron
 ---
 
