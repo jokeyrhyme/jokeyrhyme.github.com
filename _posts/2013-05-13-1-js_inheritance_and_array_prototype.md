@@ -79,11 +79,15 @@ best-practice for prototypal-inheritance.
 This is only inappropriate if it's extremely important to you that these objects
 look just like Arrays.
 
+Important: see the update at the bottom.
+
 #### Stack and Make-Sub-Array
 
 I won't detail them here, but these approaches explicitly preserve the
 relationship between the length and the highest index. These are pretty subtle
 and crafty, and are probably still necessary in older browsers.
+
+Important: see the update at the bottom.
 
 #### Direct Wrapper
 
@@ -141,3 +145,20 @@ Do check out that article, and all code can be found [on GitHub](https://github.
 
 Let me know if I've missed something. I do plan on running these same tests in
 older browsers to see if they hold up.
+
+### Update: 2013-05-15
+
+I added a few more tests after re-reading Kangax's article, and I found some
+cases where the naive and stack approaches fail. I've updated the results on my
+test repository, but here they are:
+
+What's supposed to happen (and this happens when you use a real Array) is that:
+
+- if you do something like `subArray[4] = 'abc'` then `subArray.length === 5`
+automatically
+
+- if you do something like `subArray.length === 2` then elements at index 2 and
+ higher are dropped and the highest index becomes 1
+
+The only approach that preserves all of the behaviours is the direct wrapper,
+which does have some caveats but it does tick all the boxes.
