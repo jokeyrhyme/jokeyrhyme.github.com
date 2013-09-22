@@ -112,9 +112,9 @@ You can open tmux and tell it to re-attach to any detached sessions with:
 
 1. install the prerequisite packages (this may be different if you use a different EC2 AMI or Linux distribution)
 
-    - `sudo yum install php-cli php-xml`
+    - `sudo yum groupinstall "Development Tools" -y`
     
-    - `sudo yum install gcc-c++ automake patch`
+    - `sudo yum install php-cli php-xml`
 
     - `sudo yum install {libaio,pcre,popt}-devel glibc-{devel,static}`
 
@@ -168,7 +168,7 @@ You can open tmux and tell it to re-attach to any detached sessions with:
     
     - `Y` to share your results with [OpenBenchmarking.org], if you like
     
-    - `n` to no upload system logs,
+    - `n` to no upload system logs
 
 Uploading the tests will allow you to easily refer to the tests in blog posts and generally collect together your results in an easy-to-discuss manner.
 
