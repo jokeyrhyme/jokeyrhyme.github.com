@@ -184,6 +184,12 @@ Here are the [results from an incomplete practice run] where I had some missing 
 
 The [results for my storage tests] will be be continuously updated as I try out more solutions for distributed file-systems. Stay tuned!
 
+### series
+
+1. **{{ page.title }}**
+2. [PTS Results on Provisioned IOPS on AWS EBS](/blog/2013/09/23/1/pts_results_for_piops_on_aws_ebs.html)
+
+
 [tmux]: http://tmux.sourceforge.net/
 [Phoronix Test Suite]: http://www.phoronix-test-suite.com/
 [OpenBenchmarking.org]: http://openbenchmarking.org/

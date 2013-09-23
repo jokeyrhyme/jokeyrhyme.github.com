@@ -18,7 +18,12 @@
   {% for row in result.rows %}
   <tr>
     <td>{{ row.config }}</td>
-    <td>{{ row.score }}</td>
+    <td>
+      <meter min="0" max="{{ result.max }}" value="{{ row.score }}">
+        {{ row.score }}
+      </meter>
+      <output aria-hidden="true">{{ row.score }}</output>
+    </td>
     <td>&plusmn; {{ row.error }}</td>
   </tr>
   {% endfor %}

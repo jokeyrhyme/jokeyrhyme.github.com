@@ -19,10 +19,12 @@
     h2 > em {
       font-size: smaller;
     }
+    {% if page.results %}
     table.pts-results {
       display: inline-table;
       margin-left: 1em;
     }
+    {% endif %}
   </style>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 </head>
@@ -48,7 +50,12 @@
     </ul>
   </div>
 </footer>
+<!--[if lt IE 9]>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<![endif]-->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/foundation.min.js"></script>
 <script>

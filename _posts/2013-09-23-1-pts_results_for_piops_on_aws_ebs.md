@@ -9,6 +9,7 @@ author: Ron
 results:
 - caption: "AIO-Stress v0.21: random write"
   footer: "&rarr; MB/s, more is better"
+  max: 15.87
   rows:
   - config: small-attached-ebs
     score: 15.87
@@ -21,6 +22,7 @@ results:
     error: 0.06
 - caption: "Flexible IO Tester v1.57: Intel IOMeter File Server Access Pattern"
   footer: "&larr; seconds, less is better"
+  max: 7123.30
   rows:
   - config: small-attached-ebs
     score: 1234.69
@@ -33,6 +35,7 @@ results:
     error: 5.00
 - caption: "SQLite v3.7.3: 12,500 INSERTs"
   footer: "&larr; seconds, less is better"
+  max: 377.20
   rows:
   - config: small-attached-ebs
     score: 156.35
@@ -45,6 +48,7 @@ results:
     error: 0.03
 - caption: "FS-Mark v3.3: 1000 Files, 1MB Size"
   footer: "&rarr; files/s, more is better"
+  max: 27.10
   rows:
   - config: small-attached-ebs
     score: 27.10
@@ -57,6 +61,7 @@ results:
     error: 0.03
 - caption: "Dbench v4.0: 1 Client"
   footer: "&rarr; MB/s, more is better"
+  max: 61.42
   rows:
   - config: small-attached-ebs
     score: 43.72
@@ -69,6 +74,7 @@ results:
     error: 0.11
 - caption: "Dbench v4.0: 12 Clients"
   footer: "&rarr; MB/s, more is better"
+  max: 128.37
   rows:
   - config: small-attached-ebs
     score: 128.37
@@ -81,6 +87,7 @@ results:
     error: 0.03
 - caption: "Dbench v4.0: 48 Clients"
   footer: "&rarr; MB/s, more is better"
+  max: 129.76
   rows:
   - config: small-attached-ebs
     score: 129.76
@@ -93,6 +100,7 @@ results:
     error: 1.53
 - caption: "Dbench v4.0: 128 Clients"
   footer: "&rarr; MB/s, more is better"
+  max: 115.54
   rows:
   - config: small-attached-ebs
     score: 115.54
@@ -105,6 +113,7 @@ results:
     error: 0.14
 - caption: "IOzone v3.405: 8GB Read Performance"
   footer: "&rarr; MB/s, more is better"
+  max: 34.89
   rows:
   - config: small-attached-ebs
     score: 34.89
@@ -117,6 +126,7 @@ results:
     error: 0.00
 - caption: "IOzone v3.405: 8GB Write Performance"
   footer: "&rarr; MB/s, more is better"
+  max: 33.73
   rows:
   - config: small-attached-ebs
     score: 33.73
@@ -129,6 +139,7 @@ results:
     error: 0.10
 - caption: "Threaded I/O Tester v0.3.3: 64MB Random Read - 32 Threads"
   footer: "&rarr; MB/s, more is better"
+  max: 122.08
   rows:
   - config: small-attached-ebs
     score: 122.08
@@ -141,6 +152,7 @@ results:
     error: 0.02
 - caption: "Threaded I/O Tester v0.3.3: 64MB Random Write - 32 Threads"
   footer: "&rarr; MB/s, more is better"
+  max: 13.03
   rows:
   - config: small-attached-ebs
     score: 13.03
@@ -153,6 +165,7 @@ results:
     error: 0.00
 - caption: "Compile Bench v0.6: Test: Compile"
   footer: "&rarr; MB/s, more is better"
+  max: 27.87
   rows:
   - config: small-attached-ebs
     score: 27.87
@@ -165,6 +178,7 @@ results:
     error: 0.05
 - caption: "Compile Bench v0.6: Test: Initial Create"
   footer: "&rarr; MB/s, more is better"
+  max: 24.17
   rows:
   - config: small-attached-ebs
     score: 24.17
@@ -177,6 +191,7 @@ results:
     error: 0.17
 - caption: "Compile Bench v0.6: Test: Read Compiled Tree"
   footer: "&rarr; MB/s, more is better"
+  max: 102.61
   rows:
   - config: small-attached-ebs
     score: 46.82
@@ -189,6 +204,7 @@ results:
     error: 1.25
 - caption: "Unpacking The Linux Kernel: linux-2.6.32.tar.bz2"
   footer: "&larr; seconds, less is better"
+  max: 56.25
   rows:
   - config: small-attached-ebs
     score: 48.80
@@ -201,6 +217,7 @@ results:
     error: 1.02
 - caption: "PostMark v1.51: Disk Transaction Performance"
   footer: "&rarr; TPS, more is better"
+  max: 614
   rows:
   - config: small-attached-ebs
     score: 614
@@ -213,6 +230,7 @@ results:
     error: 2.60
 - caption: "Gzip Compression: 2GB File Compression"
   footer: "&larr; seconds, less is better"
+  max: 279.83
   rows:
   - config: small-attached-ebs
     score: 55.39
@@ -225,12 +243,14 @@ results:
     error: 2.55
 - caption: "PostgreSQL pgbench v8.4.11: TPC-B Transactions Per Second"
   footer: "&rarr; TPS, more is better"
+  max: 250.39
   rows:
   - config: small-attached-ebs
     score: 250.39
     error: 3.30
 - caption: "Apache Benchmark v2.4.3: Static Web Page Serving"
   footer: "&rarr; Requests/s, more is better"
+  max: 1233.63
   rows:
   - config: small-attached-ebs
     score: 1233.63
@@ -408,12 +428,10 @@ and perhaps a wider range of instances sizes.
 
 ### series
 
-1. [Phoronix Test Suite on AWS]
+1. [Phoronix Test Suite on AWS](/blog/2013/08/27/1/phoronix_test_suite_on_aws.html)
 2. **{{ page.title }}**
 
 
 [Phoronix Test Suite]: http://www.phoronix-test-suite.com/
 [OpenBenchmarking.org]: http://openbenchmarking.org/
 [EC2 Instance Types]: http://aws.amazon.com/ec2/instance-types/
-
-[Phoronix Test Suite on AWS]: /blog/2013/08/27/1/phoronix_test_suite_on_aws.html
