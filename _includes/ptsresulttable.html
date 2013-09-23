@@ -1,0 +1,26 @@
+<table class="pts-results">
+  <caption>{{ result.caption }}</caption>
+  <thead>
+  <tr>
+    <th>configuration</th>
+    <th>score</th>
+    <th>error</th>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td colspan="3">
+      {{ result.footer }}
+    </td>
+  </tr>
+  </tfoot>
+  <tbody>
+  {% for row in result.rows %}
+  <tr>
+    <td>{{ row.config }}</td>
+    <td>{{ row.score }}</td>
+    <td>&plusmn; {{ row.error }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>

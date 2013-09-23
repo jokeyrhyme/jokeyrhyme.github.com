@@ -4,7 +4,7 @@ permalink: /blog/:year/:month/:day/:nth/:title
 ---
 <article>
   {{ content }}
-  <p>{{ page.author }} - <time datetime="{{ page.date }}">{{ page.date }}</time></p>
+  <p>{{ page.author }} - <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time></p>
 </article>
 <div id="disqus_thread"></div>
 <script>

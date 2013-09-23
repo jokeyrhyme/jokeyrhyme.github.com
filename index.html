@@ -11,7 +11,7 @@ title: jokeyrhy.me
   <p>{{ post.summary }}</p>
   <footer>
     <p><a href="{{ post.url }}">read more here...</a></p>
-    <p>{{ post.author }} - <time datetime="{{ post.date }}">{{ post.date }}</time></p>
+    <p>{{ post.author }} - <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
   </footer>
 </article>
 {% endfor %}
