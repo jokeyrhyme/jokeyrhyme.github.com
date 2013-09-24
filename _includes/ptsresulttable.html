@@ -15,11 +15,12 @@
   </tr>
   </tfoot>
   <tbody>
+  {% assign high = result.rows[0].score %}
   {% for row in result.rows %}
   <tr>
     <td>{{ row.config }}</td>
     <td>
-      <meter min="0" max="{{ result.max }}" value="{{ row.score }}">
+      <meter min="0" max="{{ result.max }}" high="{{ high }}" value="{{ row.score }}">
         {{ row.score }}
       </meter>
       <output aria-hidden="true">{{ row.score }}</output>

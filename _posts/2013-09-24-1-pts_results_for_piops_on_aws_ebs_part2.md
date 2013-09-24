@@ -1,15 +1,15 @@
 ---
 layout: post
-title: PTS Results on Provisioned IOPS on AWS EBS
-subtitle: Initial results running the Phoronix Test Suite with Provision IOPS...
-date: 2013-09-23
-permalink: /blog/2013/09/23/1/pts_results_for_piops_on_aws_ebs.html
+title: PTS Results on Provisioned IOPS on AWS EBS, Part 2
+subtitle: More results running PTS with PIOPS 1000 and 2000
+date: 2013-09-24
+permalink: /blog/2013/09/24/1/pts_results_for_piops_on_aws_ebs_part2.html
 summary: Continuing my evaluation of cloud hosted file-systems, I started looking at Provisioned IOPS as offered by AWS. This post is light on instructions and is basically just graphs of performance results.
 author: Ron
 results:
 - caption: "AIO-Stress v0.21: random write"
   footer: "&rarr; MB/s, more is better"
-  max: 15.87
+  max: 40.95
   rows:
   - config: small-attached-ebs
     score: 15.87
@@ -20,6 +20,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 15.75
     error: 0.06
+  - config: small-attached-ebs-piops1000
+    score: 35.90
+    error: 0.47
+  - config: small-attached-ebs-piops2000
+    score: 40.95
+    error: 0.25
 - caption: "Flexible IO Tester v1.57: Intel IOMeter File Server Access Pattern"
   footer: "&larr; seconds, less is better"
   max: 7123.30
@@ -33,6 +39,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 3567.55
     error: 5.00
+  - config: small-attached-ebs-piops1000
+    score: 1469.18
+    error: 2.64
+  - config: small-attached-ebs-piops2000
+    score: 802.62
+    error: 1.14
 - caption: "SQLite v3.7.3: 12,500 INSERTs"
   footer: "&larr; seconds, less is better"
   max: 377.20
@@ -46,9 +58,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 188.27
     error: 0.03
+  - config: small-attached-ebs-piops1000
+    score: 75.76
+    error: 0.52
+  - config: small-attached-ebs-piops2000
+    score: 89.05
+    error: 2.02
 - caption: "FS-Mark v3.3: 1000 Files, 1MB Size"
   footer: "&rarr; files/s, more is better"
-  max: 27.10
+  max: 33.27
   rows:
   - config: small-attached-ebs
     score: 27.10
@@ -59,9 +77,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 22.73
     error: 0.03
+  - config: small-attached-ebs-piops1000
+    score: 31.70
+    error: 0.06
+  - config: small-attached-ebs-piops2000
+    score: 33.27
+    error: 0.09
 - caption: "Dbench v4.0: 1 Client"
   footer: "&rarr; MB/s, more is better"
-  max: 61.42
+  max: 82.46
   rows:
   - config: small-attached-ebs
     score: 43.72
@@ -72,6 +96,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 61.42
     error: 0.11
+  - config: small-attached-ebs-piops1000
+    score: 82.46
+    error: 2.45
+  - config: small-attached-ebs-piops2000
+    score: 69.69
+    error: 1.49
 - caption: "Dbench v4.0: 12 Clients"
   footer: "&rarr; MB/s, more is better"
   max: 128.37
@@ -85,6 +115,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 107.33
     error: 0.03
+  - config: small-attached-ebs-piops1000
+    score: 119.30
+    error: 0.03
+  - config: small-attached-ebs-piops2000
+    score: 126.70
+    error: 0.58
 - caption: "Dbench v4.0: 48 Clients"
   footer: "&rarr; MB/s, more is better"
   max: 129.76
@@ -98,9 +134,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 109.36
     error: 1.53
+  - config: small-attached-ebs-piops1000
+    score: 120.72
+    error: 0.63
+  - config: small-attached-ebs-piops2000
+    score: 129.03
+    error: 0.97
 - caption: "Dbench v4.0: 128 Clients"
   footer: "&rarr; MB/s, more is better"
-  max: 115.54
+  max: 123.01
   rows:
   - config: small-attached-ebs
     score: 115.54
@@ -111,6 +153,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 55.91
     error: 0.14
+  - config: small-attached-ebs-piops1000
+    score: 108.84
+    error: 0.25
+  - config: small-attached-ebs-piops2000
+    score: 123.01
+    error: 0.66
 - caption: "IOzone v3.405: 8GB Read Performance"
   footer: "&rarr; MB/s, more is better"
   max: 34.89
@@ -124,9 +172,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 25.57
     error: 0.00
+  - config: small-attached-ebs-piops1000
+    score: 34.86
+    error: 0.20
+  - config: small-attached-ebs-piops2000
+    score: 34.73
+    error: 0.01
 - caption: "IOzone v3.405: 8GB Write Performance"
   footer: "&rarr; MB/s, more is better"
-  max: 33.73
+  max: 34.26
   rows:
   - config: small-attached-ebs
     score: 33.73
@@ -137,6 +191,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 22.85
     error: 0.10
+  - config: small-attached-ebs-piops1000
+    score: 33.66
+    error: 0.00
+  - config: small-attached-ebs-piops2000
+    score: 34.26
+    error: 0.17
 - caption: "Threaded I/O Tester v0.3.3: 64MB Random Read - 32 Threads"
   footer: "&rarr; MB/s, more is better"
   max: 122.08
@@ -150,6 +210,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 4.53
     error: 0.02
+  - config: small-attached-ebs-piops1000
+    score: 11.54
+    error: 0.04
+  - config: small-attached-ebs-piops2000
+    score: 23.64
+    error: 0.15
 - caption: "Threaded I/O Tester v0.3.3: 64MB Random Write - 32 Threads"
   footer: "&rarr; MB/s, more is better"
   max: 13.03
@@ -163,9 +229,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 1.75
     error: 0.00
+  - config: small-attached-ebs-piops1000
+    score: 4.40
+    error: 0.00
+  - config: small-attached-ebs-piops2000
+    score: 8.88
+    error: 0.02
 - caption: "Compile Bench v0.6: Test: Compile"
   footer: "&rarr; MB/s, more is better"
-  max: 27.87
+  max: 35.36
   rows:
   - config: small-attached-ebs
     score: 27.87
@@ -176,9 +248,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 18.27
     error: 0.05
+  - config: small-attached-ebs-piops1000
+    score: 35.36
+    error: 0.04
+  - config: small-attached-ebs-piops2000
+    score: 35.35
+    error: 0.00
 - caption: "Compile Bench v0.6: Test: Initial Create"
   footer: "&rarr; MB/s, more is better"
-  max: 24.17
+  max: 28.75
   rows:
   - config: small-attached-ebs
     score: 24.17
@@ -189,6 +267,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 14.38
     error: 0.17
+  - config: small-attached-ebs-piops1000
+    score: 28.68
+    error: 0.04
+  - config: small-attached-ebs-piops2000
+    score: 28.75
+    error: 0.15
 - caption: "Compile Bench v0.6: Test: Read Compiled Tree"
   footer: "&rarr; MB/s, more is better"
   max: 102.61
@@ -202,6 +286,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 102.61
     error: 1.25
+  - config: small-attached-ebs-piops1000
+    score: 47.89
+    error: 0.64
+  - config: small-attached-ebs-piops2000
+    score: 49.10
+    error: 0.54
 - caption: "Unpacking The Linux Kernel: linux-2.6.32.tar.bz2"
   footer: "&larr; seconds, less is better"
   max: 56.25
@@ -215,9 +305,15 @@ results:
   - config: small-attached-ebs-piops400
     score: 54.11
     error: 1.02
+  - config: small-attached-ebs-piops1000
+    score: 51.00
+    error: 0.82
+  - config: small-attached-ebs-piops2000
+    score: 46.48
+    error: 0.35
 - caption: "PostMark v1.51: Disk Transaction Performance"
   footer: "&rarr; TPS, more is better"
-  max: 614
+  max: 634
   rows:
   - config: small-attached-ebs
     score: 614
@@ -228,6 +324,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 403
     error: 2.60
+  - config: small-attached-ebs-piops1000
+    score: 606
+    error: 1.45
+  - config: small-attached-ebs-piops2000
+    score: 634
+    error: 2.33
 - caption: "Gzip Compression: 2GB File Compression"
   footer: "&larr; seconds, less is better"
   max: 279.83
@@ -241,16 +343,28 @@ results:
   - config: small-attached-ebs-piops400
     score: 138.04
     error: 2.55
+  - config: small-attached-ebs-piops1000
+    score: 60.36
+    error: 1.16
+  - config: small-attached-ebs-piops2000
+    score: 56.85
+    error: 1.10
 - caption: "PostgreSQL pgbench v8.4.11: TPC-B Transactions Per Second"
   footer: "&rarr; TPS, more is better"
-  max: 250.39
+  max: 335.26
   rows:
   - config: small-attached-ebs
     score: 250.39
     error: 3.30
+  - config: small-attached-ebs-piops1000
+    score: 301.47
+    error: 4.62
+  - config: small-attached-ebs-piops2000
+    score: 335.26
+    error: 17.91
 - caption: "Apache Benchmark v2.4.3: Static Web Page Serving"
   footer: "&rarr; Requests/s, more is better"
-  max: 1233.63
+  max: 1233.82
   rows:
   - config: small-attached-ebs
     score: 1233.63
@@ -261,6 +375,12 @@ results:
   - config: small-attached-ebs-piops400
     score: 1118.26
     error: 3.25
+  - config: small-attached-ebs-piops1000
+    score: 1135.76
+    error: 4.50
+  - config: small-attached-ebs-piops2000
+    score: 1233.82
+    error: 9.55
 ---
 
 ## {{ page.title }}
@@ -274,6 +394,8 @@ results:
 - **small-attached-ebs**: m1.small EC2 instance, standard EBS volume (ext4)
 - **small-attached-ebs-piops200**: m1.small EC2 instance, EBS volume (ext4) provisioned for 200 IOPS
 - **small-attached-ebs-piops400**: m1.small EC2 instance, EBS volume (ext4) provisioned for 400 IOPS
+- **small-attached-ebs-piops1000**: m1.small EC2 instance, EBS volume (ext4) provisioned for 1000 IOPS
+- **small-attached-ebs-piops2000**: m1.small EC2 instance, EBS volume (ext4) provisioned for 2000 IOPS
 
 Note: there's a 10:1 minimum ratio between the size of an AWS EBS volume and the IOPS you provision for it. As such, the smallest EBS volume that can be provisioned for 200 IOPS is 20GB, and the smallest volume with support for 400 IOPS is 40GB.
 
@@ -289,6 +411,8 @@ Anyway, here are the separate result pages:
 - [1308270-SO-JOKEYRHYM25](http://openbenchmarking.org/result/1308270-SO-JOKEYRHYM25)
 - [1309225-SO-JOKEYRHYM57](http://openbenchmarking.org/result/1309225-SO-JOKEYRHYM57)
 - [1309224-SO-JOKEYRHYM67](http://openbenchmarking.org/result/1309224-SO-JOKEYRHYM67)
+- [1309230-SO-JOKEYRHYM39](http://openbenchmarking.org/result/1309230-SO-JOKEYRHYM39)
+- [1309233-SO-JOKEYRHYM49](http://openbenchmarking.org/result/1309233-SO-JOKEYRHYM49)
 
 #### comparison
 
@@ -326,9 +450,6 @@ The "error" column is the maximum deviation from the average by one or more test
 {% assign result = page.results[6] %}
 {% include ptsresulttable.html %}
 
-With 48 clients, we see one of those rare moments when performance variance with
-Provisioned IOPS is higher than without. Strange.
-
 {% assign result = page.results[7] %}
 {% include ptsresulttable.html %}
 
@@ -342,14 +463,20 @@ Provisioned IOPS is higher than without. Strange.
 
 ##### THREADED I/O TESTER
 
-This benchmark highlights a specific case where provisioning 200-400 IOPS performs
-abysmally compared to no-PIOPS.
+This is one benchmark where PIOPS 2000 performance was actually double that of PIOPS 1000.
+Now that we have 4 data points for PIOPS levels, it looks like this test scales linearly
+with the PIOPS level.
 
 {% assign result = page.results[10] %}
 {% include ptsresulttable.html %}
 
 {% assign result = page.results[11] %}
 {% include ptsresulttable.html %}
+
+With a bit of napkin math, we can see that PIOPS 2000 is roughly 5 time slower than no-PIOPS
+for random reads, and PIOPS 1000 is roughly 3 times slower than no-PIOPS for random writes.
+So, for this test, it would take PIOPS 10k to match no-PIOPS read performance, and PIOPS 3k
+to match its write performance.
 
 ##### COMPILE BENCH
 
@@ -361,9 +488,6 @@ abysmally compared to no-PIOPS.
 
 {% assign result = page.results[14] %}
 {% include ptsresulttable.html %}
-
-Here's one of the few cases where provisioning only 200 IOPS still managed to
-perform significantly better than without.
 
 ##### UNPACKING THE LINUX KERNEL
 
@@ -380,57 +504,71 @@ perform significantly better than without.
 {% assign result = page.results[17] %}
 {% include ptsresulttable.html %}
 
-Here's another use case where Provisioned IOPS (at least at the 200 and 400 level)
-actually has greater performance variance than without.
-
 ##### POSTGRESQL PGBENCH
 
 {% assign result = page.results[18] %}
 {% include ptsresulttable.html %}
 
-Not sure why this benchmark didn't run for the Provisioned IOPS cases.  It may simply
-have been disabled in the version of PTS I used.
+So apparently this benchmark ran as expected with PIOPS 1000 and 2000. At some
+point, I'll need to go back and re-run with 200 and 400 to see what really happened here. :S
 
 ##### APACHE BENCHMARK
 
 {% assign result = page.results[19] %}
 {% include ptsresulttable.html %}
 
-Here's the last case where Provisioned IOPS (at least at the 200 and 400 level)
-actually has greater performance variance than without.
+This is a pretty dull benchmark. It doesn't look like PIOPS 200 through to 2000
+makes much of a difference in performance.
 
 ### observations
 
-For almost every benchmark, EBS with Provisioned IOPS had a lower variance between
-test runs, often drastically lower. This is the stated value proposition for this feature:
-you pay more, but you get a guaranteed level of performance. Without Provisioned IOPS,
-EBS performance varies quite a bit with spikes and valleys. If your application depends
-on consistent storage performance, then you really ought to turn Provisioned IOPS on.
+PIOPS 1000 and 2000 tend to out-perform PIOPS 400, which in turn out-performs PIOPS 200.
 
-That said, provisioning only 200 IOPS tended to worsen performance in almost every
-benchmark. While it's the cheapest option, the compromise here may not be suitable for all
-applications: trading spikey but decent performance for consistently poor performance.
+Cases where PIOPS 1000 clearly out-performed no-PIOPS:
 
-Provisioning 400 IOPS tended to performance somewhere between no-PIOPS and 200 PIOPS.
+- AIO-Stress
+- SQLite
+- FS-Mark
+- Dbench with 1 client
+- Compile Bench: Compile
+- PostgreSQL pgbench
+
+Cases where PIOPS 1000 performed about the same as no-PIOPS (&plusmn; 10%):
+
+- Flexible IO Tester
+- Dbench with 12, 48 and 128 clients
+- IOzone
+- Compile Bench: Initial Create and Read Compiled Tree
+- Unpacking The Linux Kernel
+- PostMark
+- Gzip Compression
+- Apache Benchmark
+
+Cases where PIOPS 1000 and 2000 were out-classed by no-PIOPS:
+
+- Threaded I/O Tester with 32 threads
 
 ### conclusions
 
-I chose to examine the Provisioned IOPS feature for 200 IOPS and 400 IOPS. While the
-results are interesting, I did not find the point where paying for PIOPS brings
-consistently better performance than not.
+For most cases, it seems that PIOPS 1000 is sufficient to smooth out the spikey
+performance of no-PIOPS without sacrificing performance.
 
-According to Amazon's documentation on [EC2 Instance Types], m1.small instances only
-have a "low" network performance rating. This is likely to affect my test results,
-as EC2 instances must communicate with EBS volumes over their network interface.
+PIOPS 2000 was not anywhere near double the performance of PIOPS 1000, except for the
+Threaded I/O Tester benchmark. This may be due to the "low" performance rating of
+the network interface on the m1.small EC2 instance. If you're going to be using
+m1.small instances, it does not seem worth going past PIOPS 1000.
 
-I will have to follow-up these results with a wider range of Provisioned IOPS levels,
-and perhaps a wider range of instances sizes.
+If you actually care about EBS performance and can afford it, then you'll probably
+be using an "EBS-optimized" size (e.g. m1.large) that offers additional network
+bandwidth and EBS performance. The tests I've been running so far cover cases
+where capacity and cost-effectiveness are more important than performance, but I
+will be testing with different sizes in future articles.
 
 ### series
 
 1. [Phoronix Test Suite on AWS](/blog/2013/08/27/1/phoronix_test_suite_on_aws.html)
-2. **{{ page.title }}**
-3. [PTS Results on Provisioned IOPS on AWS EBS, Part 2](/blog/2013/09/24/1/pts_results_for_piops_on_aws_ebs_part2.html)
+2. [PTS Results on Provisioned IOPS on AWS EBS](/blog/2013/09/23/1/pts_results_for_piops_on_aws_ebs.html)
+3. **{{ page.title }}**
 
 
 [Phoronix Test Suite]: http://www.phoronix-test-suite.com/
