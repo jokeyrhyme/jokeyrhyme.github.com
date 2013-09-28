@@ -569,6 +569,7 @@ will be testing with different sizes in future articles.
 1. [Phoronix Test Suite on AWS](/blog/2013/08/27/1/phoronix_test_suite_on_aws.html)
 2. [PTS Results on Provisioned IOPS on AWS EBS](/blog/2013/09/23/1/pts_results_for_piops_on_aws_ebs.html)
 3. **{{ page.title }}**
+4. [PTS on AWS with m1.medium EC2 and EBS with Provisioned IOPS](/blog/2013/09/28/1/pts_results_for_piops_on_medium_aws_ebs.html)
 
 
 [Phoronix Test Suite]: http://www.phoronix-test-suite.com/

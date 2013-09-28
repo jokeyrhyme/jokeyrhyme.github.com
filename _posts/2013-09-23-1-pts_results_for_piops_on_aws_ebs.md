@@ -431,6 +431,7 @@ and perhaps a wider range of instances sizes.
 1. [Phoronix Test Suite on AWS](/blog/2013/08/27/1/phoronix_test_suite_on_aws.html)
 2. **{{ page.title }}**
 3. [PTS Results on Provisioned IOPS on AWS EBS, Part 2](/blog/2013/09/24/1/pts_results_for_piops_on_aws_ebs_part2.html)
+4. [PTS on AWS with m1.medium EC2 and EBS with Provisioned IOPS](/blog/2013/09/28/1/pts_results_for_piops_on_medium_aws_ebs.html)
 
 
 [Phoronix Test Suite]: http://www.phoronix-test-suite.com/
