@@ -1,0 +1,27 @@
+/* basic styles */
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+}
+code {
+  font-weight: normal;
+  font-family: 'Ubuntu Mono', monospace;
+  /*font-size: 110%;*/
+}
+h2 > em {
+  font-size: smaller;
+}
+
+tr:nth-child(even) {
+  background-color: #ededed;
+}
+
+/* widget styles */
+
+table.pts-results {
+  display: inline-table;
+  margin-left: 1em;
+}
