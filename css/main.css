@@ -1,8 +1,9 @@
 /* basic styles */
-
-html, body {
-  font-family: 'Roboto', sans-serif;
+body {
+  background-color: #333;
+  background-image: linear-gradient(to bottom, #222, #444);
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Exo 2', sans-serif;
 }
@@ -11,12 +12,32 @@ code {
   font-family: 'Ubuntu Mono', monospace;
   /*font-size: 110%;*/
 }
+h1:first-child, h2:first-child {
+  margin-top: 0;
+}
 h2 > em {
   font-size: smaller;
+}
+h2 > a {
+  text-decoration: none;
+}
+h2 > a:focus, h2 > a:hover {
+  text-decoration: underline;
 }
 
 tr:nth-child(even) {
   background-color: #ededed;
+}
+
+article {
+  background-image: none;
+  background-color: #fff;
+  margin: 16px auto;
+  margin: 1rem auto;
+  max-width: 800px;
+  max-width: 50rem;
+  padding: 16px;
+  padding: 1rem;
 }
 
 /* widget styles */
@@ -27,6 +48,13 @@ table.pts-results {
 }
 
 /* social button styles */
+.right {
+  text-align: right;
+}
+
+header .pure-button.social {
+  font-size: 90%;
+}
 
 .pure-button.google {
   background-color: #dd4b39;
@@ -81,4 +109,33 @@ table.pts-results {
   background-color: #2a3b5c;
   color: #eee;
   opacity: .90;
+}
+
+/* override pure.css */
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* override disqus */
+#disqus_thread {
+  background-color: #ddd;
+  margin: 16px auto;
+  margin: 1rem auto;
+  max-width: 800px;
+  max-width: 50rem;
+  padding: 16px;
+  padding: 1rem;
+}
+
+/* site title */
+h1.site {
+  color: #fff;
+  margin: 8px;
+  margin: .5rem;
+}
+h1.site > a:link, h1.site > a:visited {
+  text-decoration: none;
+  color: inherit;
 }
