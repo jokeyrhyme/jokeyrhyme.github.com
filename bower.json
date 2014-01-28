@@ -1,0 +1,12 @@
+{
+  "name": "jokeyrhy.me",
+  "version": "0.0.0",
+  "description": "personal site: blog and web experiments",
+  "repository": "git@github.com:jokeyrhyme/jokeyrhyme.github.com.git",
+  "dependencies": {
+    "chai": "~1.8",
+    "idbwrapper": "~1.4",
+    "mocha": "~1.17"
+  },
+  "licenses": "BSD 3-Clause"
+}
