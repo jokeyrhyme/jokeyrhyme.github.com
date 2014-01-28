@@ -43,14 +43,14 @@ suite('browser compatibility', function () {
 
   test('browser supports XMLHttpRequest with CORS', function () {
     var xhr;
-    assert.isFunction(XMLHttpRequest);
+    assert.property(window, 'XMLHttpRequest');
     xhr = new XMLHttpRequest();
     assert.property(xhr, 'withCredentials');
   });
 
   test('browser supports Typed Arrays (e.g. ArrayBuffer)', function () {
     var xhr;
-    assert.isFunction(ArrayBuffer);
+    assert.property(window, 'ArrayBuffer');
   });
 
   test('browser supports binary-Base64 conversion', function () {
@@ -61,15 +61,15 @@ suite('browser compatibility', function () {
 
   test('browser supports File API', function () {
     var b;
-    assert.isFunction(window.Blob, 'Blob');
+    assert.property(window, 'Blob');
     try {
       b = new Blob(['hi'], { type: 'text/plain' });
       assert.ok(true, 'supports new Blob constructor');
     } catch (e) {
       assert.ok(false, 'supports new Blob constructor');
     }
-    assert.isFunction(window.FileReader, 'FileReader');
-    assert.ok(window.URL, 'URL');
+    assert.property(window, 'FileReader');
+    assert.property(window, 'URL');
     assert.isFunction(URL.createObjectURL, 'URL.createObjectURL');
     return b;
   });
