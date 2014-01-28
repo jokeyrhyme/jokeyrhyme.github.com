@@ -41,10 +41,6 @@ suite('browser compatibility', function () {
   'use strict';
   var store;
 
-  test('IDBWrapper installed global IDBStore()', function () {
-    assert.isFunction(window.IDBStore);
-  });
-
   test('browser supports XMLHttpRequest with CORS', function () {
     var xhr;
     assert.isFunction(XMLHttpRequest);
@@ -79,6 +75,7 @@ suite('browser compatibility', function () {
   });
 
   test('browser supports IndexedDB', function (done) {
+    assert.isFunction(window.IDBStore);
     store = new IDBStore({
       storeName: 'test',
       storePrefix: 'web-experiments/indexeddb-images-',
@@ -94,12 +91,10 @@ suite('browser compatibility', function () {
     });
   });
 
-  test('(optional) browser supports Blobs in IndexedDB', function (done) {
+  test('(optional) browser supports Blobs in IndexedDB', function () {
     var testBlob;
     testBlob = new Blob(['test'], { type: 'text/plain' });
-    assert.doesNotThrow(function () {
-      store.put({ id: 'blob', blob: testBlob });
-    });
+    store.put({ id: 'blob', blob: testBlob });
   });
 
   suiteTeardown(function (done) {

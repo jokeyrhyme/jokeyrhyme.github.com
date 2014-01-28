@@ -6,17 +6,29 @@
   </head>
   <body>
     <div id="mocha"></div>
-    <h1>Images</h1>
+    <h1>Web Experiments: IndexedDB Images</h1>
+    <p>This experiment combines the following:</p>
+    <ul>
+      <li>retrieving Blobs via XHR2 and CORS</li>
+      <li>converting Blobs and storing in IndexedDB</li>
+      <li>converting Blobs from IndexedDB in Data URIs</li>
+      <li>displaying Blobs as images via Data URIs</li>
+      <li>creating Blob URLs as direct references to Blobs</li>
+      <li>displaying Blobs as images via Blob URLs</li>
+    </ul>
+    <p>This example does not attempt direct storage of Blobs in IndexedDB
+    as this is not currently supported in Chrome.</p>
+    <h2>Images</h2>
     <figure>
       <figcaption>direct reference</figcaption>
       <img id="direct" />
     </figure>
     <figure>
-      <figcaption>Data URI</figcaption>
+      <figcaption>Data URI (from IndexedDB, converted to Base64)</figcaption>
       <img id="datauri" />
     </figure>
     <figure>
-      <figcaption>Blob URL</figcaption>
+      <figcaption>Blob URL (from IndexedDB, converted to Blob)</figcaption>
       <img id="bloburl" />
     </figure>
     <script src="/bower_components/mocha/mocha.js"></script>
