@@ -4,6 +4,7 @@
   "description": "personal site: blog and web experiments",
   "repository": "git@github.com:jokeyrhyme/jokeyrhyme.github.com.git",
   "dependencies": {
+    "angular": "~1.2",
     "chai": "~1.8",
     "idbwrapper": "~1.4",
     "mocha": "~1.17"
