@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <main x-ng-controller="ChangeCtrl">
+      <h1>Change Calculator</h1>
+      <div>
+        <label>
+          price:
+          <input id="price" x-ng-model="price" x-ng-change="update()" type="number" />
+        </label>
+        <label>
+          cash:
+          <input id="cash" x-ng-model="cash" x-ng-change="update()" type="number" />
+        </label>
+      </div>
+      <div>
+        <label>
+          difference:
+          <output id="difference" for="price cash" x-ng-bind="difference" />
+        </label>
+      </div>
+      <div>
+        <label>
+          rounded:
+          <output id="rounded" for="difference" x-ng-bind="rounded" />
+        </label>
+      </div>
+      <div>
+        <table>
+          <caption>change:</caption>
+          <thead>
+            <tr>
+              <th>note / coin</th>
+              <th>quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr x-ng-repeat="unit in units">
+              <td>$ {{unit}}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="calc.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
