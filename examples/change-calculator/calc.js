@@ -14,20 +14,19 @@ function round005(value) {
 }
 
 function calculateChange(price, cash) {
-  var difference, change, units;
-  units = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05];
+  var difference, change, units, u, unit, unitsLength;
   difference = cash - price;
   difference = round005(difference);
   change = {};
-  units.forEach(function (unit) {
-    while (unit < difference) {
-      if (!change[unit]) {
-        change[unit] = 0;
-      }
-      change[unit] += 1;
-      difference -= unit;
+  unitsLength = calculateChange.UNITS.length;
+  for (u = 0; u < unitsLength; u += 1) {
+    unit = calculateChange.UNITS[u];
+    if (unit <= difference) {
+      change[unit] = Math.floor(difference / unit);
+      difference -= unit * change[unit];
     }
-  });
+  }
   return change;
 }
 
+calculateChange.UNITS = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05];
