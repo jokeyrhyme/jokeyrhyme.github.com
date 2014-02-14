@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Google announces Chromium WebView
-subtitle: my response to a big change in Android KitKat 
+subtitle: my response to a big change in Android KitKat
 date: 2013-11-09
 permalink: /blog/2013/11/09/1/google-announces-chromium-webview.html
 summary: In this post, I discuss Google's announcement, its impact on hybrid-app developers and possible future improvements. This is a cross-posting of an entry I made on my employer's blog [earlier](http://blinkmobile.com.au/news/blog/218-google-announces-chromium-webview).
@@ -18,13 +18,13 @@ Google's latest Android confectionary has been announced: [4.4 KitKat](http://de
 
 ![Android desserts / versions](http://blinkmobile.com.au/images/blog/avh.jpg)
 
-## WebView? Hybrid apps?
+### WebView? Hybrid apps?
 
 Without getting into the nitty-gritty, `WebView` is a native component available when building native apps for Android. On iOS there is a similar `UIWebView` component. These components allow a native app (i.e. Java or Objective-C) to include web content, e.g. HTML, CSS and JavaScript.
 
 Native apps that use WebView components are often referrred to as "hybrid apps". They mix and match native code and web code to (hopefully) offer the best of both worlds to end-users.
 
-### Native code
+#### Native code
 
 - great for performance-sensitive functionality e.g. maths, games, transcoding
 
@@ -36,7 +36,7 @@ Native apps that use WebView components are often referrred to as "hybrid apps".
 
 - code written is platform-specific, so Android code will not run on iOS, etc
 
-### Web: HTML, CSS, JavaScript
+#### Web: HTML, CSS, JavaScript
 
 - great for displaying content already available in this format, and there's loads of this already on the Web
 
@@ -46,7 +46,7 @@ Native apps that use WebView components are often referrred to as "hybrid apps".
 
 - while they mostly agree on behaviour, different browser engine vendors (e.g. Apple, Google, Microsoft, Mozilla) have different bugs and quirks
 
-## pre-KitKat WebView
+### pre-KitKat WebView
 
 Previous versions of Android include a version of [WebKit](http://www.webkit.org/) (the web engine used by Safari and Mobile Safari) that has [not been updated since 2011](http://www.mobilexweb.com/blog/android-browser-eternal-dying). In addition to stagnating over the last two years, it has long been the subject of much lamentation. There are (at the time of writing) [370 reported issues](https://code.google.com/p/android/issues/list?can=2&q=webview) for "webview" and [244 reported issues](https://code.google.com/p/android/issues/list?can=2&q=webkit) for "webkit" (with some overlap).
 
@@ -66,7 +66,7 @@ Some of the problems include:
 
 - many users are stuck with old copies much as they were with old versions of Internet Explorer
 
-## Chromium WebView in KitKat
+### Chromium WebView in KitKat
 
 After five years of near-silence on the matter, Google finally provided an answer with Android 4.4: [Chromium WebView](http://developer.android.com/about/versions/kitkat.html#44-webview). This is based on Google's excellent [Chrome](http://google.com/chrome) browser, version 30 to be specific. This promises to drastically simplify debugging and improve web feature support and performance. It is possible that the majority of the issues reported against the previous implementation have been addressed.
 
@@ -74,13 +74,13 @@ Rendering performance, specifically, remains to be seen. [Chrome for Android](ht
 
 Google provided an [overview](https://developers.google.com/chrome/mobile/docs/webview/overview) of the new WebView, and I'll discuss some of the details I take issue with.
 
-### "Chrome for Android is separate from WebView"
+#### "Chrome for Android is separate from WebView"
 
 Chrome for Android uses 63.63MB of storage on my Nexus 4, not including caches and user data. Chrome and WebView duplicate the web engine (Chromium) which includes the V8 JavaScript engine. I'd estimate around 18MB based on storage used by Opera.
 
 There are other issues here, but for now I'll just point out that there is a minor waste of persistent storage space. Not a big deal when new devices have 16GB and 32GB of space, but this could be an issue for the low-end devices that KitKat is supposedly targeting.
 
-### "Chrome for Android supports a few features which aren't enabled in the WebView"
+#### "Chrome for Android supports a few features which aren't enabled in the WebView"
 
 The listed features not provided by WebView (but available in pure Chromium if you compile it yourself) are WebGL, WebRTC, WebAudio, Fullscreen API and Form Validation. This list is not exhaustive, so there may be more.
 
@@ -88,7 +88,7 @@ The first four are web features that are much better expressed by their native c
 
 The omission that makes me scratch my head is Form Validation. JavaScript solutions to compensate for this are likely to perform far worse than the standard built-in implementation provided by Chromium. This functionality helps prevent developers from "reinventing the wheel" by providing solid baseline features. It's a little perplexing as to why Google forces us to implement this from scratch when the same `form` HTML can use this in Chrome for Android and other modern browsers.
 
-### "WebView will continue to be tied to releases of the Android platform for the time being"
+#### "WebView will continue to be tied to releases of the Android platform for the time being"
 
 And here's the major consequence of keeping Chrome for Android separate from WebView: updates. Android OEMs produce many devices at different price points (at the behest of carriers) and historically fail to keep all but the top-of-the-line devices up to date. That means the majority of Android devices sold wind up running stale versions of Android _forever_.
 
@@ -100,7 +100,7 @@ One positive consequence of this model is that the open source version of Androi
 
 It remains to be seen what Google means by "... for the time being".
 
-#### Play Services: the alternative
+##### Play Services: the alternative
 
 It's still possible that Google may change the way they distribute Chromium WebView in future. If they were to exploit the Play Services bundle for this, they could update every device with the Play Store (the majority of Android devices outside of China) regardless of Android operating system version.
 
@@ -112,7 +112,7 @@ For apps tailored to use it, hybrid app developers could immediately benefit fro
 
 A negative consequence of this model is more thoroughly explored by [Ars Technica](http://arstechnica.com/gadgets/2013/10/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/). APIs that are part of Google Play Services cannot be relied upon with devices running Amazon's fork of Android, or those devices running in China. These also diminish the value of open source Android within the community.
 
-### "it brings ... remote debugging of web content using the Chrome DevTools"
+#### "it brings ... remote debugging of web content using the Chrome DevTools"
 
 This is a massive improvement to the previous status quo. Deploying web code in a native app used to be akin to throwing it in a black box. Now it will be possible to debug HTML, CSS and JavaScript in a hybrid app as easily and completely as within the Chrome browser (personally regarded as the best web browser for developers).
 
@@ -120,7 +120,7 @@ Web code in a hybrid app is likely to have the same or similar logic regardless 
 
 This also marks debug parity between Android's WebView and iOS' UIWebView. Diagnosing bugs just got a heck of a lot easier.
 
-## Conclusion
+### Conclusion
 
 Google's [lofty goal](http://allthingsd.com/20131031/google-aims-for-the-next-billion-users-with-android-kitkat/) of replacing those Gingerbread devices with KitKats may yet manifest, that remains to be seen. I'm sure my fingers aren't the only ones crossed in that regard.
 
