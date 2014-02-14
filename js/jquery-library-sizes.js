@@ -2,7 +2,7 @@
 /*global google*/ // Google JavaScript loader
 /*globals define, require*/ // Require.JS
 
-google.load("visualization", "1", {packages:["corechart"]});
+google.load("visualization", "1", {packages: ["corechart"]});
 google.setOnLoadCallback(function () {
   'use strict';
   require(['jquery'], function ($) {
@@ -13,14 +13,15 @@ google.setOnLoadCallback(function () {
       table$ = $('#table-' + name);
 
       data = [];
-      table$.find('tr').each(function (index, element) {
+      data.push(['date', '1.x-raw', '1.x-gzip', '2.x-raw', '2.x-gzip']);
+      table$.children('tbody').children('tr').each(function (index, element) {
         var row;
         row = [];
         $(element).children('th, td').each(function (col, cell) {
-          if (col === 0 || index === 0) {
+          if (col === 0) {
             row.push($(cell).text());
           } else {
-            row.push(parseInt($(cell).text(), 10));
+            row.push(parseInt($(cell).text() || '0', 10));
           }
         });
         data.push(row);
@@ -28,26 +29,15 @@ google.setOnLoadCallback(function () {
 
       data = google.visualization.arrayToDataTable(data);
 
-      options = {
-        title: table$.children('caption').text()
-      };
+      options = {};
 
       chart = new google.visualization.LineChart($('#chart-' + name)[0]);
       chart.draw(data, options);
     }
 
-    function drawCharts() {
-      var names;
-      names = [
-        'compat-dev',
-        'modern-dev',
-        'compat-prod',
-        'modern-prod'
-      ];
-      $.each(names, function (index, name) {
-        drawChart(name);
-      });
-    }
+    $.each(['dev', 'prod'], function (index, name) {
+      drawChart(name);
+    });
 
   });
 });
