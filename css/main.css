@@ -28,6 +28,10 @@ h2 > a:focus, h2 > a:hover {
 tr:nth-child(even) {
   background-color: #ededed;
 }
+td, th {
+  padding: 4px 8px;
+  padding: .25em .5em;
+}
 
 article {
   background-image: none;
