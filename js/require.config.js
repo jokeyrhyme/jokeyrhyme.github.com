@@ -25,6 +25,7 @@
       chai: '/bower_components/chai/chai',
       IDBStore: cdnjs + 'idbwrapper/1.4.1/idbstore.min',
       jquery: [
+        '/js/vendor/jquery/' + jQueryVersion + '-custom/jquery.min',
         cdnjs + 'jquery/' + jQueryVersion + '/jquery.min',
         google + 'jquery/' + jQueryVersion + '/jquery.min',
         jquery + 'jquery-' + jQueryVersion + '.min',
