@@ -3,7 +3,7 @@ layout: post
 title: jQuery Library Size
 subtitle: exploring jQuery's role in web page weight
 date: 2014-02-13
-summary: In this post, I look at how jQuery has changed in size over recent versions. I always look at custom builds and how much each optional feature adds to your page weight.
+summary: In this post, I look at how jQuery has changed in size over recent versions. I also look at custom builds and how much each unused feature adds to your page weight.
 author: Ron
 ---
 
@@ -73,7 +73,7 @@ The following tables shows the sizes (in bytes) for the development build of jQu
 </table>
 
 <figure>
-<figcaption>chart for development build</figcaption>
+  <figcaption>chart for development build</figcaption>
   <canvas id="chart-dev"></canvas>
 </figure>
 
@@ -100,7 +100,7 @@ The following tables shows the sizes (in bytes) for the production build of jQue
 </table>
 
 <figure>
-<figcaption>chart for production build</figcaption>
+  <figcaption>chart for production build</figcaption>
   <canvas id="chart-prod"></canvas>
 </figure>
 
@@ -116,8 +116,138 @@ white space and comments, renaming variables and safely re-ordering code.
 Further, almost all web browsers request the GZIP-compressed version of this
 optimised code, reducing the size of the download significantly.
 
-So, in practice, supporting old versions of Internet Explorer only adds between
-3.5KB and 4KB to our page weight.
+So, in practice, supporting old versions of Internet Explorer with jQuery only
+adds between 3.5KB and 4KB to our page weight.
+
+Note: this comparison does not examine the memory usage or possible performance
+impact for the extra code, only the impact on network usage.
+
+### custom builds
+
+For several releases now, it has been possible to customise jQuery's build
+process so that it only includes the pieces that you want. How this is achieved
+is documented [here](https://github.com/jquery/jquery/blob/master/README.md).
+
+#### modules I keep
+
+Even though [you might not need jQuery](http://youmightnotneedjquery.com/) in
+modern web browsers, I feel that jQuery still has much to offer. jQuery still
+offers easier DOM manipulation and Events binding compared to the standard
+DOM APIs.
+
+- **event**: this jQuery feature allows us to bind event handlers just once on
+`document.body`, which simplifies our code and saves memory
+
+- **exports/global** and **exports/amd**: these don't take up much space and
+just make including jQuery in both sorts of projects that much easier
+
+- **sizzle**: I only need this in my 1.x compatibility build, because
+this enables jQuery to function without `querySelector` (which is missing in
+old browsers)
+
+- **css**, **dimensions** and **offset**: these make working with DOM elements
+and their styles a breeze, some of which still isn't as easy without jQuery
+
+#### modules I exclude
+
+- **deprecated**: I don't use deprecated features, so I don't need them
+
+- **event/alias**: I prefer `.on('click', ...)` to `.click(...)` for
+consistency
+
+- **wrap**: the `.wrap()` methods can be quite handy, but I my use of templates
+and data binding tends to limit their usefulness
+
+- **sizzle**: I can remove this from the 2.x modern build, because I avoid
+using jQuery's non-CSS selectors (for performance reasons)
+
+  - **css/hiddenVisibleSelectors** and **effects/animatedSelector**: removed
+  from the 1.x build for parity with 2.x
+
+- **deferred**: nobody should use these as they aren't Promises/A+ compliant
+
+  - [more complete explanation here](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken)
+
+  - [great overview of alternatives](http://www.html5rocks.com/en/tutorials/es6/promises)
+
+- **ajax**: using this module is
+[an exercise in frustration for me](http://bugs.jquery.com/ticket/11548)
+even when I need to support ancient browsers
+
+- **core/ready**: putting your `script` elements at the end of `body` is an
+easy enough alternative, and is considered to be better practice anyway
+
+- **effects**: I tend to use CSS Animations and/or JS libraries with fancier
+features
+
+#### process
+
+```sh
+rm -fr src/sizzle test/qunit dist/* test/libs
+git checkout 1.11.0
+npm install
+grunt bowercopy
+grunt custom:-deprecated,-event/alias,-wrap,-core/ready,-ajax,-effects,-deferred,-css/hiddenVisibleSelectors
+grunt compare_size
+
+rm -fr src/sizzle test/qunit dist/* test/libs
+git checkout 2.1.0
+npm install
+grunt bowercopy
+grunt custom:-deprecated,-event/alias,-wrap,-core/ready,-ajax,-effects,-deferred,-sizzle
+grunt compare_size
+```
+
+For the `grunt custom:...` lines, I will group the exclusions in batches where
+the reduction isn't likely to be very high, or where dependencies need to be
+accounted for:
+
+- **A**: deprecated, event/alias, and wrap
+- **B**: ajax
+- **C**: effects
+- **D**: deferred, ajax, effects, core/ready
+- **E**: sizzle for 2.x, css/hiddenVisibleSelectors and
+effects/animatedSelector for 1.x
+- **F**: all of the above
+
+#### results
+
+For each of the above batches, the following table compares the sizes of the
+following:
+
+- raw source code for the 1.x compatibility build
+- raw source code for the 2.x modern build
+- production minified and gzipped output for the 1.x build
+- production minified and gzipped output for the 2.x build
+
+The stock sizes (from the earlier comparisons) are repeated here for
+convenience.
+
+<table id="table-custom">
+  <caption>custom build sizes</caption>
+  <thead>
+    <tr>
+      <th></th><th colspan="2">raw source</th><th colspan="2">min + gzip</th>
+    </tr>
+    <tr>
+      <th>batch</th><th>1.x</th><th>2.x</th><th>1.x</th><th>2.x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>stock</td><td>282944</td><td>244963</td><td>33392</td><td>29281</td></tr>
+    <tr><td>A</td><td>280469</td><td>242476</td><td>32968</td><td>28885</td></tr>
+    <tr><td>B</td><td>247945</td><td>214621</td><td>29218</td><td>25615</td></tr>
+    <tr><td>C</td><td>261416</td><td>225658</td><td>30498</td><td>26685</td></tr>
+    <tr><td>D</td><td>253386</td><td>219142</td><td>29678</td><td>26012</td></tr>
+    <tr><td>E</td><td>282458</td><td>191483</td><td>33333</td><td>23495</td></tr>
+    <tr><td>F</td><td>215508</td><td>132915</td><td>25106</td><td>16148</td></tr>
+  </tbody>
+</table>
+
+<figure>
+  <figcaption>chart for custom build</figcaption>
+  <canvas id="chart-custom"></canvas>
+</figure>
 
 <script src="/js/jquery-library-sizes.js"></script>
 
