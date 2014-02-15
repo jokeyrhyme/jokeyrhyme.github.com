@@ -1,38 +1,46 @@
 /*jslint browser:true, indent:2*/
-/*global google*/ // Google JavaScript loader
 /*globals define, require*/ // Require.JS
 
-google.load("visualization", "1", {packages: ["corechart"]});
-google.setOnLoadCallback(function () {
+// draw the release size charts
+require(['jquery', 'chart'], function ($, Chart) {
   'use strict';
-  require(['jquery'], function ($) {
 
     function drawChart(name) {
-      var data, options, chart, table$;
+    var data, options, chart, table$, chart$, colors;
 
       table$ = $('#table-' + name);
+    chart$ = $('#chart-' + name);
 
-      data = [];
-      data.push(['date', '1.x-raw', '1.x-gzip', '2.x-raw', '2.x-gzip']);
+    chart$.attr({
+      width: chart$.parent().innerWidth(),
+      height: 200
+    });
+
+    colors = ['rgb(150, 0, 0)', 'rgb(150, 0, 150)', 'rgb(0, 150, 0)', 'rgb(0, 150, 150)'];
+
+    data = {
+      labels: [],
+      datasets: []
+    };
+
       table$.children('tbody').children('tr').each(function (index, element) {
-        var row;
-        row = [];
         $(element).children('th, td').each(function (col, cell) {
           if (col === 0) {
-            row.push($(cell).text());
+          data.labels.push($(cell).text());
           } else {
-            row.push(parseInt($(cell).text() || '0', 10));
+          data.datasets[col - 1] = data.datasets[col - 1] || {
+            fillColor: 'transparent',
+            strokeColor: colors[col - 1],
+            pointColor: colors[col - 1],
+            pointStrokeColor: '#fff',
+            data: []
+          };
+          data.datasets[col - 1].data.push(parseInt($(cell).text() || '0', 10));
           }
         });
-        data.push(row);
       });
 
-      data = google.visualization.arrayToDataTable(data);
-
-      options = {};
-
-      chart = new google.visualization.LineChart($('#chart-' + name)[0]);
-      chart.draw(data, options);
+    chart = new Chart(chart$[0].getContext('2d')).Line(data, {});
     }
 
     $.each(['dev', 'prod'], function (index, name) {

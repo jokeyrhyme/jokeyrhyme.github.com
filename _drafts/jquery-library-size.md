@@ -7,6 +7,8 @@ summary: In this post, I look at how jQuery has changed in size over recent vers
 author: Ron
 ---
 
+<link rel="stylesheet" href="/css/jquery-library-sizes.css" />
+
 ## {{ page.title }}
 
 ## _{{ page.subtitle }}_
@@ -72,7 +74,7 @@ The following tables shows the sizes (in bytes) for the development build of jQu
 
 <figure>
 <figcaption>chart for development build</figcaption>
-<div id="chart-dev"></div>
+  <canvas id="chart-dev"></canvas>
 </figure>
 
 The following tables shows the sizes (in bytes) for the production build of jQuery
@@ -99,7 +101,7 @@ The following tables shows the sizes (in bytes) for the production build of jQue
 
 <figure>
 <figcaption>chart for production build</figcaption>
-<div id="chart-prod"></div>
+  <canvas id="chart-prod"></canvas>
 </figure>
 
 #### impact on page weight
@@ -117,7 +119,6 @@ optimised code, reducing the size of the download significantly.
 So, in practice, supporting old versions of Internet Explorer only adds between
 3.5KB and 4KB to our page weight.
 
-<script src="//www.google.com/jsapi"></script>
 <script src="/js/jquery-library-sizes.js"></script>
 
 
