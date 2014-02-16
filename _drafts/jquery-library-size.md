@@ -15,11 +15,22 @@ author: Ron
 
 {{ page.summary }}
 
+I've been reading [Secrets of the JavaScript Ninja](http://jsninja.com/), by
+[John Resig](http://ejohn.org/). It's a terrific read, and I highly recommend
+it. I have gained a deeper appreciation of the work that DOM libraries (like
+[jQuery](http://jquery.com/) do for us, work I'd really rather not do myself.
+
+So this post is a partly a reaction to the growing anti-jQuery sentiment
+amongst JavaScript developers. I want to look at the custom build system and
+come up with a way to keep jQuery relevant for my use cases without paying any
+unnecessary penalties.
+
 ### recent jQuery versions
 
-jQuery 2 drops support for browsers that are missing `querySelector` and
-`addEventListener` (e.g. Internet Explorer 8 and older). In order to continue
-supporting such browsers, jQuery 1.10 continues to be developed in parallel.
+jQuery 2 drops support for browsers that are missing ECMAScript 5,
+`querySelector` and `addEventListener` (e.g. Internet Explorer 8 and older).
+In order to continue supporting such browsers, jQuery 1.10 continues to be
+developed in parallel.
 
 The following table shows the version numbers for the parallel releases:
 
@@ -130,11 +141,6 @@ is documented [here](https://github.com/jquery/jquery/blob/master/README.md).
 
 #### modules I keep
 
-Even though [you might not need jQuery](http://youmightnotneedjquery.com/) in
-modern web browsers, I feel that jQuery still has much to offer. jQuery still
-offers easier DOM manipulation and Events binding compared to the standard
-DOM APIs.
-
 - **event**: this jQuery feature allows us to bind event handlers just once on
 `document.body`, which simplifies our code and saves memory
 
@@ -159,12 +165,12 @@ consistency
 and data binding tends to limit their usefulness
 
 - **sizzle**: I can remove this from the 2.x modern build, because I avoid
-using jQuery's non-CSS selectors (for performance reasons)
+using jQuery's non-W3C CSS selectors (for performance reasons)
 
   - **css/hiddenVisibleSelectors** and **effects/animatedSelector**: removed
   from the 1.x build for parity with 2.x
 
-- **deferred**: nobody should use these as they aren't Promises/A+ compliant
+- **deferred**: these aren't Promises/A+ compliant
 
   - [more complete explanation here](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken)
 
@@ -183,19 +189,15 @@ features
 #### process
 
 ```sh
-rm -fr src/sizzle test/qunit dist/* test/libs
 git checkout 1.11.0
 npm install
-grunt bowercopy
-grunt custom:-deprecated,-event/alias,-wrap,-core/ready,-ajax,-effects,-deferred,-css/hiddenVisibleSelectors
-grunt compare_size
+grunt
+grunt custom:-deprecated,-event/alias,-wrap,-core/ready,-ajax,-effects,-deferred,-css/hiddenVisibleSelectors compare_size
 
-rm -fr src/sizzle test/qunit dist/* test/libs
 git checkout 2.1.0
 npm install
-grunt bowercopy
-grunt custom:-deprecated,-event/alias,-wrap,-core/ready,-ajax,-effects,-deferred,-sizzle
-grunt compare_size
+grunt
+grunt custom:-deprecated,-event/alias,-wrap,-core/ready,-ajax,-effects,-deferred,-sizzle compare_size
 ```
 
 For the `grunt custom:...` lines, I will group the exclusions in batches where
@@ -238,9 +240,9 @@ convenience.
     <tr><td>A</td><td>280469</td><td>242476</td><td>32968</td><td>28885</td></tr>
     <tr><td>B</td><td>247945</td><td>214621</td><td>29218</td><td>25615</td></tr>
     <tr><td>C</td><td>261416</td><td>225658</td><td>30498</td><td>26685</td></tr>
-    <tr><td>D</td><td>253386</td><td>219142</td><td>29678</td><td>26012</td></tr>
+    <tr><td>D</td><td>218373</td><td>188786</td><td>25543</td><td>22351</td></tr>
     <tr><td>E</td><td>282458</td><td>191483</td><td>33333</td><td>23495</td></tr>
-    <tr><td>F</td><td>215508</td><td>132915</td><td>25106</td><td>16148</td></tr>
+    <tr><td>mine</td><td>215508</td><td>132915</td><td>25106</td><td>16148</td></tr>
   </tbody>
 </table>
 
@@ -249,6 +251,45 @@ convenience.
   <canvas id="chart-custom"></canvas>
 </figure>
 
+#### impact on page weight
+
+I'm happy to restrict my queries to W3C CSS (and not rely on the extra
+selectors added by [Sizzle](https://github.com/jquery/sizzle)), so I exclude
+it from my 2.x build. As a result, we see my 2.x build drop 89KB of source code
+and 10KB of page weight with batch E.
+
+### thoughts
+
+#### jQuery vs custom jQuery
+
+My production-optimised 1.x build is ~25% smaller than the full version, and my
+2.x build is ~45% smaller. Those are huge savings, and could mean the
+difference between meeting a page weight budget and going over.
+
+#### jQuery vs pure JavaScript
+
+Even though [you might not need jQuery](http://youmightnotneedjquery.com/) in
+modern web browsers, I feel that jQuery still has much to offer. As even that
+web site admits, there are loads of bugs and browser quirks that jQuery
+handles.
+
+jQuery offers easier event management compared to the standard DOM APIs. This
+is very important for use cases that involve dynamic insertion of content and
+binding events. For this, `addEventListener` is still inadequate.
+
+The APIs exposed by jQuery are well-understood and frequently emulated by other
+libraries like [Angular.JS](http://angularjs.org/) and
+[Zepto](http://zeptojs.com/). Developers should absolutely learn how to use the
+W3C DOM APIs, but jQuery's are something of a standard, too.
+
+#### light-weight alternatives
+
+- [Better DOM](https://github.com/chemerisuk/better-dom)
+
+- [Zepto.JS](http://zeptojs.com/)
+
+### conclusion
+
+
+
 <script src="/js/jquery-library-sizes.js"></script>
-
-
