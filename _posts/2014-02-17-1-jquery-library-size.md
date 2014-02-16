@@ -2,7 +2,9 @@
 layout: post
 title: jQuery Library Size
 subtitle: exploring jQuery's role in web page weight
-date: 2014-02-13
+date: 2014-02-17
+nth: 1
+permalink: /blog/2014/02/17/1/jquery-library-size.html
 summary: In this post, I look at how jQuery has changed in size over recent versions. I also look at custom builds and how much each unused feature adds to your page weight.
 author: Ron
 ---
@@ -269,9 +271,8 @@ difference between meeting a page weight budget and going over.
 #### jQuery vs pure JavaScript
 
 Even though [you might not need jQuery](http://youmightnotneedjquery.com/) in
-modern web browsers, I feel that jQuery still has much to offer. As even that
-web site admits, there are loads of bugs and browser quirks that jQuery
-handles.
+modern web browsers, I feel that jQuery still has much to offer. There are
+loads of bugs and browser quirks that jQuery handles for us.
 
 jQuery offers easier event management compared to the standard DOM APIs. This
 is very important for use cases that involve dynamic insertion of content and
@@ -288,8 +289,28 @@ W3C DOM APIs, but jQuery's are something of a standard, too.
 
 - [Zepto.JS](http://zeptojs.com/)
 
+Note: these are younger projects, and may not offer the same comprehensive bug
+fixes for browser quirks, or the same highly-tuned performance. I mention them
+here because you might care most of all about page weight, and these do beat
+jQuery on that score.
+
 ### conclusion
 
+jQuery 2.x is smaller than 1.x, but not significantly so. You can widen the gap
+with a custom 2.x build that eschews Sizzle. I am a little disappointed that I
+wasn't able to reduce it further.
 
+A custom jQuery build such as mine could be used to enhance the selector
+functionality for `angular.element`. Angular.JS provides its own cross-browser
+AJAX and Promise functionality, which is wasted duplication with the complete
+jQuery.
+
+For new projects, you are probably better off starting without jQuery if you
+can help it. It is definitely a wasted download if you only perform basic DOM
+manipulation (or none at all).
+
+For more complex needs, you should evaluate your options. Do you want to spend
+loads of time battling quirky browsers? Or would you rather use a library and
+have your users wait a bit longer?
 
 <script src="/js/jquery-library-sizes.js"></script>
