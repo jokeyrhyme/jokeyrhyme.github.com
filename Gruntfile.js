@@ -10,6 +10,7 @@ module.exports = function (grunt) {
       all: {
         src: [
           '**/*.js',
+          '!**/*.min.js',
           '!js/base64toBlob.js',
           '!**/_site/**/*',
           '!**/_vendor/**/*',
@@ -33,6 +34,21 @@ module.exports = function (grunt) {
           errorsOnly: true,
           failOnError: true
         }
+      }
+    },
+
+    uglify: {
+      require: {
+        files: {
+          'js/min/require.min.js': [
+            'bower_components/requirejs/require.js',
+            'js/require.config.js'
+          ]
+        }
+      },
+      options: {
+        sourceMap: true,
+        sourceMapIncludeSources: true
       }
     }
   });

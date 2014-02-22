@@ -5,7 +5,9 @@
   "repository": "git@github.com:jokeyrhyme/jokeyrhyme.github.com.git",
   "dependencies": {
     "chai": "~1.9",
-    "mocha": "~1.17",
+    "mocha": "~1.17"
+  },
+  "devDependencies": {
     "requirejs": "~2.1"
   },
   "licenses": "BSD 3-Clause"
