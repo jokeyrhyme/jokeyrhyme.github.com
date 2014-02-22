@@ -21,9 +21,24 @@
       <a href="/" class="pure-menu-heading">jokeyrhy.me</a>
 
       <ul class="pure-menu-children">
+        {% if page.title == "jokeyrhy.me" or site.related_posts %}
         <li class="pure-menu-selected">
           <a href="/">Blog</a>
         </li>
+        {% else %}
+        <li>
+          <a href="/">Blog</a>
+        </li>
+        {% endif %}
+        {% if page.title == "stuff" %}
+        <li class="pure-menu-selected">
+          <a href="/stuff">Stuff</a>
+        </li>
+        {% else %}
+        <li>
+          <a href="/stuff">Stuff</a>
+        </li>
+        {% endif %}
         <li class="pure-menu-can-have-children">
           <a class="pure-menu-label" tabindex="0">Me</a>
           <ul class="pure-menu-children">
