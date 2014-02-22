@@ -313,4 +313,4 @@ For more complex needs, you should evaluate your options. Do you want to spend
 loads of time battling quirky browsers? Or would you rather use a library and
 have your users wait a bit longer?
 
-<script src="/js/jquery-library-sizes.js"></script>
+<script src="/js/min/jquery-library-sizes.min.js"></script>
