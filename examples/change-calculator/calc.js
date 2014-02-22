@@ -1,6 +1,7 @@
 /*jslint indent:2*/
 
 function round005(value) {
+  'use strict';
   var remainder;
   value *= 100;
   remainder = value % 5;
@@ -14,7 +15,8 @@ function round005(value) {
 }
 
 function calculateChange(price, cash) {
-  var difference, change, units, u, unit, unitsLength;
+  'use strict';
+  var difference, change, u, unit, unitsLength;
   difference = cash - price;
   difference = round005(difference);
   change = {};

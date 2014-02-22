@@ -1,4 +1,4 @@
-/*jslint indent:2*/
+/*jslint browser:true, indent:2*/
 /*globals define, require*/ // Require.JS
 
 /*globals calculateChange, round005*/ // our new functions

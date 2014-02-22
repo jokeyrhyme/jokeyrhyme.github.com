@@ -6,7 +6,7 @@ require(['jquery', 'chart'], function ($, Chart) {
   'use strict';
 
   function drawChart(name) {
-    var data, options, chart, table$, chart$, colors;
+    var data, chart, table$, chart$, colors;
 
     table$ = $('#table-' + name);
     chart$ = $('#chart-' + name);
@@ -23,6 +23,7 @@ require(['jquery', 'chart'], function ($, Chart) {
       datasets: []
     };
 
+    /*jslint unparam:true*/ // unused index
     table$.children('tbody').children('tr').each(function (index, element) {
       $(element).children('th, td').each(function (col, cell) {
         if (col === 0) {
@@ -39,13 +40,18 @@ require(['jquery', 'chart'], function ($, Chart) {
         }
       });
     });
+    /*jslint unparam:false*/
 
     chart = new Chart(chart$[0].getContext('2d')).Line(data, {});
+
+    return chart;
   }
 
+  /*jslint unparam:true*/ // unused index
   $.each(['dev', 'prod'], function (index, name) {
     drawChart(name);
   });
+  /*jslint unparam:false*/
 
 });
 
@@ -53,7 +59,7 @@ require(['jquery', 'chart'], function ($, Chart) {
 require(['jquery', 'chart'], function ($, Chart) {
   'use strict';
 
-  var data, options, chart, table$, chart$, colors;
+  var data, chart, table$, chart$, colors;
 
   table$ = $('#table-custom');
   chart$ = $('#chart-custom');
@@ -70,6 +76,7 @@ require(['jquery', 'chart'], function ($, Chart) {
     datasets: []
   };
 
+  /*jslint unparam:true*/ // unused index
   table$.children('tbody').children('tr').each(function (index, element) {
     $(element).children('th, td').each(function (col, cell) {
       if (col === 0) {
@@ -84,7 +91,9 @@ require(['jquery', 'chart'], function ($, Chart) {
       }
     });
   });
+  /*jslint unparam:false*/
 
   chart = new Chart(chart$[0].getContext('2d')).Bar(data, {});
 
+  return chart;
 });

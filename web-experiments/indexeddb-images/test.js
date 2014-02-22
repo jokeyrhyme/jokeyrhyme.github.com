@@ -1,8 +1,9 @@
 /*jslint browser:true, indent:2*/
 /*globals define, require*/ // Require.JS
-/*globals suite, test, setup, teardown, suiteSetup, suiteTeardown*/ // Mocha
+/*globals mocha, suite, test, setup, teardown, suiteSetup, suiteTeardown*/ // Mocha
 
-/*globals atob, btoa, ArrayBuffer, Blob, FileReader*/ // Web APIs
+/*globals atob, btoa, ArrayBuffer, Blob, FileReader, Uint8Array, URL*/ // Web APIs
+/*globals base64toBlob*/ // helper functions
 
 require(['chai', 'IDBStore'], function (chai, IDBStore) {
   'use strict';
@@ -15,32 +16,7 @@ require(['chai', 'IDBStore'], function (chai, IDBStore) {
 
   url = '//placekitten.com/g/200/200';
 
-  // http://stackoverflow.com/questions/16245767/
-  function base64toBlob(base64Data, contentType) {
-    contentType = contentType || '';
-    var sliceSize, byteCharacters, bytesLength, slicesCount, byteArrays,
-      sliceIndex, begin, end, bytes, offset, i;
-
-    sliceSize = 1024;
-    byteCharacters = atob(base64Data);
-    bytesLength = byteCharacters.length;
-    slicesCount = Math.ceil(bytesLength / sliceSize);
-    byteArrays = new Array(slicesCount);
-
-    for (sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
-      begin = sliceIndex * sliceSize;
-      end = Math.min(begin + sliceSize, bytesLength);
-      bytes = new Array(end - begin);
-      for (offset = begin, i = 0 ; offset < end; ++i, ++offset) {
-          bytes[i] = byteCharacters[offset].charCodeAt(0);
-      }
-      byteArrays[sliceIndex] = new Uint8Array(bytes);
-    }
-    return new Blob(byteArrays, { type: contentType });
-  }
-
   suite('browser compatibility', function () {
-    var store;
 
     test('browser supports XMLHttpRequest with CORS', function () {
       var xhr;
@@ -50,12 +26,10 @@ require(['chai', 'IDBStore'], function (chai, IDBStore) {
     });
 
     test('browser supports Typed Arrays (e.g. ArrayBuffer)', function () {
-      var xhr;
       assert.property(window, 'ArrayBuffer');
     });
 
     test('browser supports binary-Base64 conversion', function () {
-      var xhr;
       assert.isFunction(atob);
       assert.isFunction(btoa);
     });
@@ -169,7 +143,6 @@ require(['chai', 'IDBStore'], function (chai, IDBStore) {
   });
 
   suite('display image', function () {
-    'use strict';
     var blob;
 
     test('reconstruct Blob from store', function (done) {
@@ -213,7 +186,7 @@ require(['chai', 'IDBStore'], function (chai, IDBStore) {
     });
 
     test('show image via Blob URL', function (done) {
-      var img, url;
+      var img;
       url = URL.createObjectURL(blob);
       assert.isString(url);
       img = document.getElementById('bloburl');
