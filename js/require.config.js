@@ -26,7 +26,6 @@
       chart: '//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min',
       IDBStore: cdnjs + 'idbwrapper/1.4.1/idbstore.min',
       jquery: [
-        '/js/vendor/jquery/' + jQueryVersion + '-custom/jquery.min',
         cdnjs + 'jquery/' + jQueryVersion + '/jquery.min',
         google + 'jquery/' + jQueryVersion + '/jquery.min',
         jquery + 'jquery-' + jQueryVersion + '.min',
