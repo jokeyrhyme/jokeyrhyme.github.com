@@ -4,7 +4,7 @@
   "description": "personal site: blog and web experiments",
   "repository": "git@github.com:jokeyrhyme/jokeyrhyme.github.com.git",
   "dependencies": {
-    "chai": "~1.8",
+    "chai": "~1.9",
     "mocha": "~1.17",
     "requirejs": "~2.1"
   },
