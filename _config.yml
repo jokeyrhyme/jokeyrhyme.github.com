@@ -2,4 +2,13 @@ safe: true
 lsi: false
 pygments: true
 
-exclude: [bower.json, Gemfile, Gemfile.lock, jokeyrhyme.github.com.iml, Rakefile, README.md]
+exclude:
+  - bower.json
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - jokeyrhyme.github.com.iml
+  - node_modules
+  - package.json
+  - Rakefile
+  - README.md
