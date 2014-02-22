@@ -1,0 +1,14 @@
+{
+  "name": "jokeyrhy.me",
+  "version": "0.0.0",
+  "description": "personal site: blog and web experiments",
+  "repository": "git@github.com:jokeyrhyme/jokeyrhyme.github.com.git",
+  "dependencies": {},
+  "licenses": "BSD 3-Clause",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-uglify": "~0.3",
+    "grunt-jqlint": "~0.1",
+    "grunt-jslint": "~1.1"
+  }
+}

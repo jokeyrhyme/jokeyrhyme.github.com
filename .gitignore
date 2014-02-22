@@ -5,5 +5,7 @@
 /.idea/workspace.xml
 /.idea/dictionaries
 
-# ignore Bundler files
+# ignore 3rd-party files
 /_vendor
+node_modules
+
