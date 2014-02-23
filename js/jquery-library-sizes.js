@@ -1,10 +1,8 @@
 /*jslint browser:true, indent:2*/
 /*globals define, require*/ // Require.JS
 
-/*globals Modernizr*/
-
 // draw the release size charts
-define(['jquery', 'chart', 'modernizr'], function ($, Chart) {
+define(['jquery', 'chart', 'modernizr'], function ($, Chart, Modernizr) {
   'use strict';
 
   if (!Modernizr.canvas) {

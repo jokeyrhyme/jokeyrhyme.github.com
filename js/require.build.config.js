@@ -12,6 +12,11 @@
       IDBStore: 'empty:',
       jquery: 'empty:',
       modernizr: '../bower_components/modernizr/modernizr'
+    },
+    shim: {
+      modernizr: {
+        exports: 'Modernizr'
+      }
     }
   });
 
