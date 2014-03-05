@@ -54,6 +54,22 @@ have a superior implementation of drag-and-drop within our grasp!
 
 8. **disable the "Enable dragging" checkbox**
 
+### tips and tricks
+
+This does take a little getting used to, but I've found the following helps:
+
+- make sure that your three fingers are separated just slightly, so that the
+trackpad detects three separate fingers and not one giant blob thing
+
+- for long drags, when you run out of space, pick up your fingers and quickly
+put them down on the opposite side of the trackpad
+
+- the timing to continue a drag (when you've run out of space) is still short,
+so don't lift your fingers up for too long
+
+- definitely practice drawing selection boxes on your Desktop for a while,
+both big ones and deliberately small ones
+
 ### Why do I do this?
 
 With these settings, every single-finger-tap on my trackpad is interpretted as
