@@ -17,6 +17,8 @@ author: Ron
 
 {{ page.summary }}
 
+_Note: this article was updated 2014-03-06, check below the conclusion_
+
 I've been reading [Secrets of the JavaScript Ninja](http://jsninja.com/), by
 [John Resig](http://ejohn.org/). It's a terrific read, and I highly recommend
 it. I have gained a deeper appreciation of the work that DOM libraries (like
@@ -312,5 +314,18 @@ manipulation (or none at all).
 For more complex needs, you should evaluate your options. Do you want to spend
 loads of time battling quirky browsers? Or would you rather use a library and
 have your users wait a bit longer?
+
+### update: 2014-03-06
+
+Before removing Sizzle from jQuery the way I have here, you should read this
+[discussion I had with a Sizzle developer](https://github.com/jquery/sizzle/issues/249).
+
+As expected, `querySelectorAll` isn't wired up to be a perfect replacement for
+Sizzle, so you need to be aware of the differences.
+
+There's also a great quote here:
+
+> Measuring page weight is not the same as measuring load and render times.
+> 100kb may in fact have a negligible effect on the performance of your page.
 
 <script src="/js/min/jquery-library-sizes.min.js"></script>
