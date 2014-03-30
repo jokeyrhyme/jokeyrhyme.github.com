@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Activity</title>
+  </head>
+  <body>
+    <h1>My Activity</h1>
+    <p>The periods of time below do not overlap. That is, data for the last 3 days is presented, then the 7 days preceding them, etc.</p>
+    <div ng-controller="ActivityCtrl">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="2">Twitter</th>
+          </tr>
+          <tr>
+            <th>Period</th>
+            <th>Tweets</th>
+            <th>Retweets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="period in breakdown.periods track by period.name">
+            <td>{{ period.name }}</td>
+            <td>{{ period.tweets }}</td>
+            <td>{{ period.retweets }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script async="async" data-main="main.js" src="/js/min/require.min.js"></script>
+  </body>
+</html>
