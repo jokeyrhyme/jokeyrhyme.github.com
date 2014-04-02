@@ -13,6 +13,8 @@ Mostly useless, but demonstrates web technology that I've been playing with:
 
 - [numeric input on smartphones](/web-experiments/input-type-number/)
 
+- [Modernizr build with all the options](/web-experiments/modernizr/)
+
 ### Examples
 
 Usually more complete than experiments, and usually associated with a tutorial:
