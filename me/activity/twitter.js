@@ -11,21 +11,34 @@ define(['angular'], function (ng) {
   mod.factory('twitter.timeline', [
     '$http',
     function ($http) {
-      var service, url;
+      var service, url, fetchTweets;
       url = 'http://young-wildwood-4158.herokuapp.com/twitter/timeline/jokeyrhyme';
-      service = {
-        timeline: []
+
+      fetchTweets = function () {
+        $http({
+          url: url,
+          method: 'GET',
+          cache: true,
+          responseType: 'json',
+          params: {
+            count: 200,
+            max_id: service.lowestId
+          }
+        }).success(function (data) {
+          var oldest;
+          if (Array.isArray(data) && data.length) {
+            service.timeline.push.apply(service.timeline, data);
+          }
+        });
       };
-      $http({
-        url: url,
-        method: 'GET',
-        cache: true,
-        responseType: 'json'
-      }).success(function (data) {
-        if (Array.isArray(data)) {
-          service.timeline = data;
-        }
-      });
+
+      service = {
+        timeline: [],
+        lowestId: ''
+      };
+
+      fetchTweets();
+
       return service;
     }
   ]);

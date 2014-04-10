@@ -12,8 +12,13 @@ define(['angular', 'breakdown', 'twitter'], function (ng, Breakdown) {
     '$scope', 'twitter.timeline',
     function ($scope, svc) {
 
+      $scope.timeline = svc.timeline;
+      $scope.breakdown = new Breakdown();
+
       $scope.update = function (tweets) {
-        $scope.breakdown = new Breakdown();
+        var startIndex, unprocessed;
+        startIndex = $scope.breakdown.countAllTweets();
+        unprocessed = tweets.slice(startIndex);
         tweets.forEach(function (tweet) {
           var period, date;
           date = new Date(Date.parse(tweet.created_at));
@@ -28,9 +33,7 @@ define(['angular', 'breakdown', 'twitter'], function (ng, Breakdown) {
         });
       };
 
-      $scope.$watch(function () {
-        return svc.timeline;
-      }, function (tweets) {
+      $scope.$watchCollection('timeline', function (tweets) {
         if (Array.isArray(tweets)) {
           $scope.update(tweets);
         }

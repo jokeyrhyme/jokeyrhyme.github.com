@@ -44,5 +44,11 @@ define(function () {
     return this.periods[this.periods.length - 1];
   };
 
+  Breakdown.prototype.countAllTweets = function () {
+    return this.periods.reduce(function (prev, curr) {
+      return prev + (curr.retweets || 0) + (curr.tweets || 0);
+    }, 0);
+  };
+
   return Breakdown;
 });
