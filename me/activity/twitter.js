@@ -32,7 +32,6 @@ define(['angular'], function (ng) {
           responseType: 'json',
           params: params
         }).success(function (data) {
-          var oldest;
           if (Array.isArray(data) && data.length) {
             if (max_id) {
               data.shift(); // remove tweet we've already parsed before
