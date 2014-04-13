@@ -12,6 +12,7 @@ module.exports = function (grunt) {
           '**/*.js',
           '!**/*.min.js',
           '!js/base64toBlob.js',
+          '!js/modernizr-build*.js',
           '!**/_site/**/*',
           '!**/_vendor/**/*',
           '!**/bower_components/**/*',
