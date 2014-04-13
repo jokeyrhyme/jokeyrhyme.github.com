@@ -1,0 +1,15 @@
+label.tweets {
+  color: rgb(0, 150, 250);
+}
+label.replies {
+  color: rgb(0, 150, 150);
+}
+label.retweets {
+  color: rgb(0, 150, 0);
+}
+
+/* bit of BEM */
+
+.HoursChart__filter {
+  display: inline-block;
+}

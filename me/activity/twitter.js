@@ -1,7 +1,7 @@
 /*jslint browser:true, indent:2*/
 /*globals define, require*/ // Require.JS
 
-define(['angular'], function (ng) {
+define(['angular', 'breakdown'], function (ng, Breakdown) {
   'use strict';
 
   var mod;
@@ -49,6 +49,43 @@ define(['angular'], function (ng) {
       };
 
       fetchTweets();
+
+      return service;
+    }
+  ]);
+
+  mod.factory('twitter.breakdown', [
+    '$rootScope', 'twitter.timeline',
+    function ($rootScope, timeline) {
+      var service, $scope;
+
+      service = new Breakdown();
+
+      $scope = $rootScope.$new(true);
+      $scope.timeline = timeline.timeline;
+
+      $scope.$watchCollection('timeline', function (tweets) {
+        var startIndex, unprocessed;
+        if (Array.isArray(tweets)) {
+          startIndex = service.countAllTweets();
+          unprocessed = tweets.slice(startIndex);
+          unprocessed.forEach(function (tweet) {
+            var period, date, category, hour;
+            date = new Date(Date.parse(tweet.created_at));
+            hour = service.hoursOfDay[date.getHours()];
+            period = service.findPeriodFor(date);
+            if (tweet.retweeted_status) {
+              category = 'retweets';
+            } else if (tweet.in_reply_to_status_id_str) {
+              category = 'replies';
+            } else {
+              category = 'tweets';
+            }
+            hour[category].push(tweet);
+            period[category].push(tweet);
+          });
+        }
+      });
 
       return service;
     }

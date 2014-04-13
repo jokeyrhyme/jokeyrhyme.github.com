@@ -10,6 +10,9 @@ define(function () {
     this.name = name;
     this.from = from;
     this.to = to;
+    this.tweets = [];
+    this.retweets = [];
+    this.replies = [];
   };
 
   Period.prototype.matches = function (date) {
@@ -19,7 +22,7 @@ define(function () {
   };
 
   Breakdown = function () {
-    var to;
+    var to, hour;
     to = new Date();
     this.periods = Breakdown.PERIODS.map(function (days) {
       var from, period;
@@ -29,6 +32,12 @@ define(function () {
       return period;
     });
 
+    this.hoursOfDay = [];
+    hour = 24;
+    while (hour > 0) {
+      hour -= 1;
+      this.hoursOfDay.unshift(new Period(null, null, String(hour)));
+    }
   };
 
   Breakdown.PERIODS = [3, 7, 14, 30, 60, 120];
@@ -46,7 +55,7 @@ define(function () {
 
   Breakdown.prototype.countAllTweets = function () {
     return this.periods.reduce(function (prev, curr) {
-      return prev + (curr.retweets || 0) + (curr.tweets || 0);
+      return prev + curr.retweets.length + curr.replies.length + curr.tweets.length;
     }, 0);
   };
 

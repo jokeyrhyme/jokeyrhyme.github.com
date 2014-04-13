@@ -2,32 +2,78 @@
 <html>
   <head>
     <title>Activity</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <h1>My Activity</h1>
-    <p>The periods of time below do not overlap. That is, data for the last 3 days is presented, then the 7 days preceding them, etc.</p>
+
+    <noscript>
+      This page requires JavaScript and advanced features of the Web Platform in order to function.
+
+      This page aggregates statistics about my social network usage, which you may gauge for yourself by visiting:
+      <ul>
+        <li><a href="//twitter.com/jokeyrhyme">my Twitter profile</a></li>
+      </ul>
+    </noscript>
+
     <div ng-controller="ActivityCtrl">
+
+      <h2>Social Network Engagement Rate</h2>
+
+      <p>The periods of time below do not overlap. That is, data for the last 3 days is presented, then the 7 days preceding them, etc.</p>
+
       <table>
+        <caption>recent history for the last {{timeline.length}} tweets</caption>
         <thead>
           <tr>
             <th></th>
-            <th colspan="2">Twitter</th>
+            <th colspan="3">Twitter</th>
           </tr>
           <tr>
             <th>Period</th>
             <th>Tweets</th>
+            <th>Replies</th>
             <th>Retweets</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="period in breakdown.periods track by period.name">
             <td>{{ period.name }}</td>
-            <td>{{ period.tweets }}</td>
-            <td>{{ period.retweets }}</td>
+            <td>{{ period.tweets.length }}</td>
+            <td>{{ period.replies.length }}</td>
+            <td>{{ period.retweets.length }}</td>
           </tr>
         </tbody>
       </table>
+
+      <div ng-controller="HoursCtrl" class="HoursChart">
+
+        <h2>Hours of Social Network Engagement</h2>
+
+        <p>The times below are presented in local time (per your system or browser settings). From this, it is possible to guess my typical sleeping patterns. :P</p>
+
+        <canvas chart="breakdown.hoursOfDay" timeline="timeline" categories="categories" height="400" width="400" class="HoursChart__chart"></canvas>
+
+        <fieldset class="HoursChart__filter">
+          <label class="tweets">
+            <input type="checkbox" ng-model="filter.tweets" ng-change="updateFilter()" />
+            tweets
+          </label>
+          <label class="replies">
+            <input type="checkbox" ng-model="filter.replies" ng-change="updateFilter()" />
+            replies
+          </label>
+          <label class="retweets">
+            <input type="checkbox" ng-model="filter.retweets" ng-change="updateFilter()" />
+            retweets
+          </label>
+        </fieldset>
+
+      </div>
+
     </div>
-    <script async="async" data-main="main.js" src="/js/min/require.min.js"></script>
+    <script async data-main="main.js" src="/js/min/require.min.js"></script>
   </body>
 </html>
