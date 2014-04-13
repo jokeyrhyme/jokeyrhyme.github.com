@@ -30,7 +30,8 @@
         google + 'jquery/' + jQueryVersion + '/jquery.min',
         jquery + 'jquery-' + jQueryVersion + '.min',
         microsoft + 'jquery/jquery-' + jQueryVersion + '.min'
-      ]
+      ],
+      modernizr: '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min'
     },
     shim: {
       angular: {
@@ -38,6 +39,9 @@
       },
       chart: {
         exports: 'Chart'
+      },
+      modernizr: {
+        exports: 'Modernizr'
       }
     },
     enforceDefine: true
