@@ -19,8 +19,12 @@
   require.config({
     paths: {
       angular: [
-        google + 'angularjs/1.2.15/angular.min',
-        cdnjs + 'angular.js/1.2.15/angular.min'
+        google + 'angularjs/1.2.16/angular.min',
+        cdnjs + 'angular.js/1.2.16/angular.min'
+      ],
+      ngRoute: [
+        google + 'angularjs/1.2.16/angular-route.min',
+        cdnjs + 'angular.js/1.2.16/angular-route.min'
       ],
       chai: '/bower_components/chai/chai',
       chart: '//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min',
@@ -35,6 +39,10 @@
     },
     shim: {
       angular: {
+        exports: 'angular'
+      },
+      ngRoute: {
+        deps: ['angular'],
         exports: 'angular'
       },
       chart: {
