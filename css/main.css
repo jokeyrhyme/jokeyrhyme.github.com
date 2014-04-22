@@ -111,8 +111,15 @@ table.pts-results {
   background-color: #3f4944;
   color: #f6f5ed;
 }
-.social > span {
-  font-family: "Roboto Condensed", "PT Sans Narrow", "Arial Narrow", sans-serif;
+
+.social.codepen, .social.codepen:focus, .social.codepen:hover {
+  background-image: linear-gradient(#111, #222);
+  background-color: #222;
+  color: #fff;
+}
+.social.codepen:active {
+  background-color: #111;
+  color: #fff;
 }
 
 /* override disqus */
