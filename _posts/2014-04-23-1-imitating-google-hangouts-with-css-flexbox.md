@@ -17,7 +17,7 @@ author: Ron
 
 ### What is CodePen.io?
 
-[CodePen.io](http://codepen.io/) is a site that hosts your HTML, CSS and JavaScript snippets in a way that fascilitates sharing them and demonstrating what they do. In the past, I've used [JSFiddle](http://jsfiddle.net/) to achieve the same end. CodePen is just a bit newer and prettier. :) JSFiddle does offer better version control, in my opinion.
+[CodePen.io](http://codepen.io/) is a site that hosts your HTML, CSS and JavaScript snippets in a way that facilitates sharing them and demonstrating what they do. In the past, I've used [JSFiddle](http://jsfiddle.net/) to achieve the same end. CodePen is just a bit newer and prettier. :) JSFiddle does offer better version control, in my opinion.
 
 These are just like [GitHub Gist](https://gist.github.com/), except that they are primarily for web code, and will execute that code right there in your web browser.
 
