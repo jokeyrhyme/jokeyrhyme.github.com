@@ -41,7 +41,7 @@ to make selected notifications more glance-friendly.
 
 Also, a swipe from the right-edge will bring up [Google Camera](https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera),
 which is the stock camera app for Nexus devices.
-It's worth a look if you have Android 4.4 aren't in love with your current camera app.
+It's worth a look if you have Android 4.4 and aren't in love with your current camera app.
 
 ### Home Screen
 
