@@ -42,6 +42,16 @@ table.pts-results {
   margin-left: 1em;
 }
 
+article.post figure {
+  display: inline-block;
+  max-width: 45%;
+}
+
+article.post figure:focus {
+  display: block;
+  max-width: 100%;
+}
+
 /* social button styles */
 .right {
   text-align: right;
