@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "My Android Home Screen"
+title: My Android Home Screen
 subtitle: "and my Lock Screen, too"
-date: 2014-05-01
+date: {}
 nth: 1
-permalink: /blog/2014/05/01/1/my-android-home-screen.html
+permalink: "/blog/2014/05/01/1/my-android-home-screen.html"
 summary: "This is a quick guide to the most visible apps on my phone. Which ones enjoy prime real estate?"
 author: Ron
+published: true
 ---
 
 ## {{ page.title }}
@@ -41,7 +42,7 @@ to make selected notifications more glance-friendly.
 
 Also, a swipe from the right-edge will bring up [Google Camera](https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera),
 which is the stock camera app for Nexus devices.
-It's worth a look if you have Android 4.4 aren't in love with your current camera app.
+It's worth a look if you have Android 4.4 and aren't in love with your current camera app.
 
 ### Home Screen
 
