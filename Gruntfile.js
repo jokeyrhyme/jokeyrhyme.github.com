@@ -49,7 +49,13 @@ module.exports = function (grunt) {
           name: 'jquery-library-sizes',
           include: ['modernizr'],
           insertRequire: ['jquery-library-sizes'],
-          out: 'js/min/jquery-library-sizes.min.js'
+          out: 'js/min/jquery-library-sizes.min.js',
+          optimize: 'uglify2',
+          uglify2: {
+            output: {
+              max_line_len: 80
+            }
+          }
         }
       }
     },
@@ -65,7 +71,10 @@ module.exports = function (grunt) {
       },
       options: {
         sourceMap: true,
-        sourceMapIncludeSources: true
+        sourceMapIncludeSources: true,
+        beautify: {
+          max_line_len: 80
+        }
       }
     }
   });
