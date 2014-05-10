@@ -6,12 +6,13 @@
   "dependencies": {
     "chai": "~1.9",
     "html5shiv": "~3.7.0",
-    "pure": "~0.4.2"
     "mocha": "~1.18",
+    "pure": "~0.4.2"
   },
   "devDependencies": {
     "requirejs": "~2.1",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "prism": "gh-pages"
   },
   "licenses": "BSD 3-Clause"
 }

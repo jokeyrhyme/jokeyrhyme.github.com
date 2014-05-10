@@ -11,4 +11,5 @@ node_modules
 
 # ignore bower devDependencies
 bower_components/modernizr
+bower_components/prism
 bower_components/requirejs

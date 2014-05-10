@@ -38,6 +38,17 @@ module.exports = function (grunt) {
       }
     },
 
+    cssmin: {
+      combine: {
+        files: {
+          'css/min/prism.min.css': [
+            'bower_components/prism/themes/prism.css',
+            'bower_components/prism/plugins/line-numbers/prism-line-numbers.css'
+          ]
+        }
+      }
+    },
+
     requirejs: {
       compile: {
         options: {
@@ -61,11 +72,17 @@ module.exports = function (grunt) {
     },
 
     uglify: {
-      require: {
+      all: {
         files: {
           'js/min/require.min.js': [
             'bower_components/requirejs/require.js',
             'js/require.config.js'
+          ],
+          'js/min/prism.min.js': [
+            'bower_components/prism/prism.js',
+            'bower_components/prism/components/prism-markup.js',
+            'bower_components/prism/components/prism-javascript.js',
+            'bower_components/prism/plugins/line-numbers/prism-line-numbers.js'
           ]
         }
       },
@@ -79,13 +96,14 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-jqlint');
   grunt.loadNpmTasks('grunt-jslint');
 
   grunt.registerTask('test', ['jqlint', 'jslint']);
-  grunt.registerTask('build', ['requirejs', 'uglify']);
+  grunt.registerTask('build', ['cssmin', 'requirejs', 'uglify']);
 
   grunt.registerTask('default', ['build', 'test']);
 };
