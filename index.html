@@ -6,7 +6,9 @@ title: jokeyrhy.me
 <article>
   <header>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {% if post.subtitle %}
     <h2><em>{{ post.subtitle }}</em></h2>
+    {% endif %}
   </header>
   <p>{{ post.summary }}</p>
   <footer>
