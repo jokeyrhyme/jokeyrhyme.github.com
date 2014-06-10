@@ -7,7 +7,10 @@
     "chai": "~1.9",
     "html5shiv": "~3.7.0",
     "mocha": "~1.18",
-    "pure": "~0.4.2"
+    "pure": "~0.4.2",
+    "assertive-chai": "~1.0.0",
+    "sort-leaves-last": "~1.0.0",
+    "poll-until": "~1.0.0"
   },
   "devDependencies": {
     "requirejs": "~2.1",

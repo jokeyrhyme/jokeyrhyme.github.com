@@ -1,0 +1,12 @@
+{
+  "name": "node-assert",
+  "homepage": "https://github.com/Jxck/assert",
+  "_release": "f25d9b80ea",
+  "_resolution": {
+    "type": "commit",
+    "commit": "f25d9b80eac2cde3080613f4ef18a0a507dd4882"
+  },
+  "_source": "git://github.com/Jxck/assert.git",
+  "_target": "f25d9b80eac2cde3080613f4ef18a0a507dd4882",
+  "_originalSource": "node-assert"
+}

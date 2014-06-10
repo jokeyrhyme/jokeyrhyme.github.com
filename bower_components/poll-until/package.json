@@ -1,0 +1,28 @@
+{
+  "name": "poll-until",
+  "version": "1.0.0",
+  "description": "last resort in lieu of events or promises",
+  "main": "poll-until.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --ui tdd tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokeyrhyme/poll-until.js.git"
+  },
+  "keywords": [
+    "async",
+    "wait",
+    "poll"
+  ],
+  "author": "\"Ron Waldon\" (http://jokeyrhy.me/)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/jokeyrhyme/poll-until.js/issues"
+  },
+  "homepage": "https://github.com/jokeyrhyme/poll-until.js",
+  "devDependencies": {
+    "assertive-chai": "^1.0.0",
+    "mocha": "^1.20.1"
+  }
+}

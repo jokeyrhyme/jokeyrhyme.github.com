@@ -1,0 +1,21 @@
+{
+  "name": "assertive-chai",
+  "version": "1.0.0",
+  "description": "Chai.js without Expect or Should",
+  "main": "assertive-chai.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --ui bdd tests/*.js"
+  },
+  "keywords": [
+    "test",
+    "assertion",
+    "assert",
+    "testing",
+    "chai"
+  ],
+  "author": "\"Ron Waldon\" (http://jokeyrhy.me/)",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "^1.19.0"
+  }
+}
