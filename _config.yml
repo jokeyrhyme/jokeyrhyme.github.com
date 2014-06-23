@@ -4,6 +4,8 @@ pygments: true
 
 markdown: kramdown
 
+encoding: utf-8
+
 exclude:
   - bower.json
   - Gemfile
