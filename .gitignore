@@ -1,6 +1,11 @@
 .DS_Store
 /_site
 
+# BitTorrent Sync
+/.SyncID
+/.SyncIgnore
+/.SyncArchive
+
 # ignore IDE files
 /.idea/workspace.xml
 /.idea/dictionaries
