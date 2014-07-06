@@ -5,6 +5,10 @@ title: stuff
 
 ## Miscellaneous Stuff! And Things!
 
+### Web Apps
+
+- [planning poker](/apps/planning-poker/)
+
 ### Web Experiments
 
 Mostly useless, but demonstrates web technology that I've been playing with:
