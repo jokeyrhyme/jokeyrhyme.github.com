@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/jokeyrhyme
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jokeyrhy.me
+  * I am jokeyrhyme (https://keybase.io/jokeyrhyme) on keybase.
+  * I have a public key with fingerprint 191C 5FC6 2DE0 94A4 D6BD  5A99 B150 7111 F96E C3B1
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "191c5fc62de094a4d6bd5a99b1507111f96ec3b1",
+            "host": "keybase.io",
+            "key_id": "b1507111f96ec3b1",
+            "uid": "546a07c265ee97e10e9c120d9a9cad00",
+            "username": "jokeyrhyme"
+        },
+        "service": {
+            "hostname": "jokeyrhy.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1413506846,
+    "expire_in": 157680000,
+    "prev": "ed9e7ad2c58300a952a9f8e1ec3151e8d06e5c64a3b7ae96480f140453a4e9de",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.1.3
+Comment: https://keybase.io/crypto
+
+yMHlAnicbZFbSBRhFMd3y1tGXoKCEhMHfLBWm293ZnZmNLpYWpFY4UumLTPffLs7
+pjPbzLgqGlEP+aJk5q3UCgoN0gR7kMRAJO3BXUopyy6UmUFeyEhBKLFvpF6i7+Xj
+/M///M45nCeb1lsirTUJ12+1jQegdWTgR4kld59nRwUhqlI5wVcQZ9Ha55YVD9J8
+mqwYBE8ADkDaDRm7hEiOEiiJESVa4DgR0KQTAODmGAQdIiBshFfVzQqMEQUdpcoq
+1nDgkiWs/sdfspagKUYgndDO0AhxTgRIxEFgJyVO4KAgkaRp1JGmCMUIuwtVTNS8
+5Tg4byOw7pchMqc2m//jScWRjfBpqqFCtQgnvIbh4806o9xnGkuR6PqDcImyIuHF
+cYEfabqsKgQPsBMasskEFHDQJMNSjI1AZT5ZQy7ZdNBOhiXxM9sgP0YiiUNOQbJD
+mnWQpMDRdoFzswjgnQENECuRDKIhQwkO0SkgjqFY0g0okqIdAoU4yRxYR+cUFbMx
+1BA8mKnLHkUwSjS88uBAfojFGmkJC11n3s4SuSHm70XjksJXCzL25Da1f88c5kf3
+g4/3mKNTvbO1odsa5YdbqvY+TetCCVFdzyNG7xJRNg2tBOfaeuH73UpdbR4qO7EM
+k/Mb6rd2vP3cyVdknc7JDKbHpDxYVGcDGxsm/ZPenZ6Rbu/yh+r+4cqxju6hV6s1
+PZeSo6f77Z1ftrPxdad6YoNpCz/j6/u+9h25WcwHHiVVvWi3jUP92uuZgszVkKXE
+A9WjBbvaZloWz3x6Np29NC/fuBz9mCw8HhE43DqR3dI0cWVqfjCvMiUuvfXgnbHG
+CONiRujmBeLdbRQWjPWuJF4dGsguuvCystnaXHr/jYvV59q/NQR/FZ88dGwoay7c
+VZbzG5e+GtM=
+=B7EQ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jokeyrhyme
+
+==================================================================
+
