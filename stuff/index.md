@@ -5,6 +5,8 @@ title: stuff
 
 ## Miscellaneous Stuff! And Things!
 
+- [NBNCo Fail](/stuff/nbnco-fail/)
+
 ### Web Apps
 
 - [planning poker](/apps/planning-poker/)
