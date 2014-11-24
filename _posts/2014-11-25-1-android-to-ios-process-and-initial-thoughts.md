@@ -170,3 +170,13 @@ all investing further into their cloud services if that were the case.
 In future posts, I'll review the iPhone and iOS itself. Please leave comments if
 you have any suggestions for a recent platform-hopper such as myself, or if you
 have specific questions that you'd like answered in my upcoming review(s).
+
+## Social Posts
+
+You can find this article and (hopefully) some network-specific discussions at:
+
+- [Google+](https://plus.google.com/+RonWaldon/posts/SsjjWiWKYkz)
+- [Twitter](https://twitter.com/jokeyrhyme/status/536910474307072000)
+- [Facebook](https://www.facebook.com/jokeyrhyme/posts/10152896114577433)
+
+Please leave comments using the above social networks.
