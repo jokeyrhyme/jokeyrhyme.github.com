@@ -158,17 +158,6 @@ article.post figure:focus {
   fill: #fff;
 }
 
-/* override disqus */
-#disqus_thread {
-  background-color: #fff;
-  margin: 16px auto;
-  margin: 1rem auto;
-  max-width: 800px;
-  max-width: 50rem;
-  padding: 16px;
-  padding: 1rem;
-}
-
 /* top bar menus */
 .pure-menu .pure-menu-label:focus + ul,
 .pure-menu .pure-menu-label:hover + ul,
