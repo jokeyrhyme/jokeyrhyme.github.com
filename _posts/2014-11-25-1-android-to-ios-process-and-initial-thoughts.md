@@ -74,7 +74,7 @@ generators as I setup their associated accounts, just to be on the safe side.
 Google's Drive suite follows me everywhere, although I do plan on evaluating
 Microsoft and Apple's cross-platform entrants in the office suite race.
 
-I have a todo lists (including a shared grocery list) in Wunderlist. We use
+I have todo lists (including a shared grocery list) in Wunderlist. We use
 Trello at work here and there, and I've used it for brainstorming for personal
 projects, such as organising my recent move.
 
