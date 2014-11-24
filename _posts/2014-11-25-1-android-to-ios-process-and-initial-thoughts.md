@@ -83,7 +83,7 @@ projects, such as organising my recent move.
 
 The Twitter, Facebook and Google+ apps are some of the earliest apps I'll
 install on any new device. The presence of these apps improves the login
-experience in a some apps, but most other apps lean on webviews for social
+experience in some apps, but most other apps lean on webviews for social
 authentication.
 
 These organic, squishy sources play an increasing role in my awareness of world
