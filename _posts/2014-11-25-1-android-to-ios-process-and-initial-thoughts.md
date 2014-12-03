@@ -171,6 +171,13 @@ In future posts, I'll review the iPhone and iOS itself. Please leave comments if
 you have any suggestions for a recent platform-hopper such as myself, or if you
 have specific questions that you'd like answered in my upcoming review(s).
 
+
+## Android to iOS series:
+
+1. process and initial thoughts
+2. [Nexus 5 versus iPhone 6](/blog/2014/12/03/1/android-to-ios-nexus-5-versus-iphone-6.html)
+
+
 ## Social Posts
 
 You can find this article and (hopefully) some network-specific discussions at:
