@@ -176,3 +176,13 @@ the Nexus 5, with just a handful of exceptions. The fit and finish is impecable.
 
 1. [process and initial thoughts](/blog/2014/11/25/1/android-to-ios-process-and-initial-thoughts.html)
 2. Nexus 5 versus iPhone 6
+
+## Social Posts
+
+You can find this article and (hopefully) some network-specific discussions at:
+
+- [Google+](https://plus.google.com/+RonWaldon/posts/4ZmD9WfwDGN)
+- [Twitter](https://twitter.com/jokeyrhyme/status/540029812803260416)
+- [Facebook](https://www.facebook.com/jokeyrhyme/posts/10152914723307433)
+
+Please leave comments using the above social networks.
