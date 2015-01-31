@@ -94,3 +94,12 @@ Both Safari and Chrome on iOS are even less reliable than desktop
 Chrome. Worse, Chrome on iOS hangs in a way that causes both the page
 and the surrounding UI (a.k.a. "chrome") to become unresponsive.
 
+
+## Social Posts
+
+You can find this article and (hopefully) some network-specific discussions at:
+
+- [Google+](https://plus.google.com/+RonWaldon/posts/5E8LS2SbSrB)
+
+Please leave comments using the above social network(s).
+
