@@ -23,3 +23,11 @@ You can find it here:
 
 If you think I'm missing something that could benefit others,
 then feel free to submit a [Pull Request](https://github.com/jokeyrhyme/keep-contributing/pulls) or otherwise suggest modifications and additions in a [GitHub Issue](https://github.com/jokeyrhyme/keep-contributing/issues).
+
+
+## Social Posts
+
+I've cross-posted this on the following social networks, where your comments are welcome:
+
+- [Google+](https://plus.google.com/+RonWaldon/posts/aYVLyCrj3xS)
+- [Twitter](https://twitter.com/jokeyrhyme/status/696214862360215552)
