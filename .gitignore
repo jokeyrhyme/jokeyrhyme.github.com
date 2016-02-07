@@ -11,6 +11,7 @@
 /.idea/dictionaries
 
 # ignore 3rd-party files
+Gemfile.lock
 /_vendor
 node_modules
 
