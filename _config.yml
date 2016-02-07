@@ -1,8 +1,5 @@
 safe: true
 lsi: false
-highlighter: 'pygments'
-
-markdown: kramdown
 
 encoding: utf-8
 
