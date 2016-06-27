@@ -17,11 +17,11 @@ author: Ron
 
 I played with Redux-Form on the weekend, building upon my own past experience with React and Redux
 
-- React: https://facebook.github.io/react/index.html
+- React: [https://facebook.github.io/react/index.html](https://facebook.github.io/react/index.html)
 
-- Redux: http://redux.js.org/
+- Redux: [http://redux.js.org/](http://redux.js.org/)
 
-- Redux-Form: http://redux-form.com/
+- Redux-Form: [http://redux-form.com/](http://redux-form.com/)
 
 This report is primarily focused on Redux-Form, so you might want to familiarise yourself with React and Redux first.
 
@@ -29,7 +29,7 @@ Redux-Form has escape-hatches to allow integration with Immutable.js, but it wor
 
 Note that I do usually prefer to use Immutable.js, and highly recommend that you go check it out:
 
-- Immutable.js: https://facebook.github.io/immutable-js/
+- Immutable.js: [https://facebook.github.io/immutable-js/](https://facebook.github.io/immutable-js/)
 
 
 ### What life is like without Redux-Form?
