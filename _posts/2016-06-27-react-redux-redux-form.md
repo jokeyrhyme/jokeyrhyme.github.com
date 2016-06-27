@@ -23,7 +23,11 @@ I played with Redux-Form on the weekend, building upon my own past experience wi
 
 - Redux-Form: [http://redux-form.com/](http://redux-form.com/)
 
-This report is primarily focused on Redux-Form, so you might want to familiarise yourself with React and Redux first.
+This report is primarily focused on Redux-Form, so you might want to familiarise yourself with React and Redux first. I found Dan Abramov's courses on EggHead.io to be particularly illuminating:
+
+- [https://egghead.io/courses/getting-started-with-redux](https://egghead.io/courses/getting-started-with-redux)
+
+- [https://egghead.io/courses/building-react-applications-with-idiomatic-redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
 
 Redux-Form has escape-hatches to allow integration with Immutable.js, but it works with vanilla JavaScript data structures by default. Rather than muck about with that integration, I didn’t bother with Immutable.js for this experiment.
 
