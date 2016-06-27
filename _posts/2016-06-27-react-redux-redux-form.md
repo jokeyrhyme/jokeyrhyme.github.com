@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React, Redux, and Redux-Form"
-subtitle: "a review of Redux-Form and how it improves the React+Redux productivity"
+subtitle: "a review of Redux-Form and how it improves React+Redux productivity"
 date: 2016-06-27
 summary: "I played with Redux-Form and loved it!"
 author: Ron
