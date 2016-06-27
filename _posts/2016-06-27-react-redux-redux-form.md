@@ -1,13 +1,19 @@
 ---
 layout: post
 title: "React, Redux, and Redux-Form"
-subtitle: "a review of Redux-Form and how improves the React+Redux productivity"
+subtitle: "a review of Redux-Form and how it improves the React+Redux productivity"
 date: 2016-06-27
 summary: "I played with Redux-Form and loved it!"
 author: Ron
 ---
 
-## Overview
+## {{ page.title }}
+
+## _{{ page.subtitle }}_
+
+{{ page.summary }}
+
+### Overview
 
 I played with Redux-Form on the weekend, building upon my own past experience with React and Redux
 
@@ -26,7 +32,7 @@ Note that I do usually prefer to use Immutable.js, and highly recommend that you
 - Immutable.js: https://facebook.github.io/immutable-js/
 
 
-## What life is like without Redux-Form?
+### What life is like without Redux-Form?
 
 For each form, the following must be done:
 
@@ -69,7 +75,7 @@ For each form field, the following must be done:
 Now you have an input field in a React component shown to the user, with state managed by Redux
 
 
-## With Redux-Form?
+### With Redux-Form?
 
 Once per project / app, the following must be done:
 
@@ -98,7 +104,7 @@ For each form field, the following must be done:
 So now you have all the functional programming benefits of using Redux to manage app state, but now you can wire up new form fields in a way that lets you focus on the presentation part instead of the Redux part
 
 
-## Redux-Form downsides?
+### Redux-Form downsides?
 
 - Very React-specific, in fact, it might not even work with React Native (??)
 
@@ -109,7 +115,7 @@ So now you have all the functional programming benefits of using Redux to manage
     - There’s a MobX-Form project, but it seems pretty new / immature
 
 
-## What else is good about Redux-Form?
+### What else is good about Redux-Form?
 
 Redux-Form has the following additional features:
 
@@ -136,7 +142,7 @@ Redux-Form has the following additional features:
     - I’m pretty sure it’s not a Facebook project, or actually used at Facebook
 
 
-## Closing Thoughts
+### Closing Thoughts
 
 - Don’t start a React + Redux project without Redux-Form
 
