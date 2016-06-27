@@ -123,7 +123,7 @@ So now you have all the functional programming benefits of using Redux to manage
 
 Redux-Form has the following additional features:
 
-- Deep forms, which are like our nested subforms
+- Deep forms: forms within forms
 
 - Multi-record forms
 
