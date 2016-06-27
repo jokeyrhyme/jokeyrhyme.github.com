@@ -147,3 +147,14 @@ Redux-Form has the following additional features:
 - Don’t start a React + Redux project without Redux-Form
 
 - It’s a massive time-saver for management of user input fields
+
+
+## Social Posts
+
+I've cross-posted this on the following social networks, where your comments are welcome:
+
+- [Twitter](https://twitter.com/jokeyrhyme/status/747333795511033860)
+
+- [Google+](https://plus.google.com/+RonWaldon/posts/cpZeZTEtp1Z)
+
+- [LinkedIn](https://www.linkedin.com/hp/update/6153099410109644800)
