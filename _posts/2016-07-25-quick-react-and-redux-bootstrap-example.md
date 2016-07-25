@@ -125,3 +125,12 @@ This might very well be the best technical documentation I've ever encountered.
 You learn about core concepts and recommendations from very clear writing.
 
 
+## Social Posts
+
+I've cross-posted this on the following social networks, where your comments are welcome:
+
+- [Twitter](https://twitter.com/jokeyrhyme/status/757412832543518720)
+
+- [Google+](https://plus.google.com/+RonWaldon/posts/3bvFp1999hm)
+
+- [LinkedIn](https://www.linkedin.com/hp/update/6163178657826222080)
