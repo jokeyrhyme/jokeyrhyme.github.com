@@ -1,11 +1,10 @@
 ---
+title: 'Web Browsers: Benchmarks and Observations'
+date: 2015-01-31 00:00:00 Z
 layout: post
-title: "Web Browsers: Benchmarks and Observations"
-subtitle: "browser performance and standards-compliance"
-date: 2015-01-31
-summary: "I recently re-ran a selection of benchmarks and tests on my
-phone, laptop and desktop, involving multiple browsers and operating
-systems. Here is what I found."
+subtitle: browser performance and standards-compliance
+summary: I recently re-ran a selection of benchmarks and tests on my phone, laptop
+  and desktop, involving multiple browsers and operating systems. Here is what I found.
 author: Ron
 ---
 

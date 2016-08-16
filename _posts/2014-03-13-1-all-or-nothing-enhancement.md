@@ -1,11 +1,13 @@
 ---
+title: All-Or-Nothing Enhancement
+date: 2014-03-13 00:00:00 Z
+permalink: "/blog/2014/03/13/1/all-or-nothing-enhancement.html"
 layout: post
-title: "All-Or-Nothing Enhancement"
 subtitle: Progressive-Enhancement for the lazy
-date: 2014-03-13
 nth: 1
-permalink: /blog/2014/03/13/1/all-or-nothing-enhancement.html
-summary: "Progressive Enhancement can spiral out of control with all the different levels of browser-compatibility that may need to be addressed. I attempt to reduce this to just two levels, whilst introducing my latest JavaScript library: noscript.js"
+summary: 'Progressive Enhancement can spiral out of control with all the different
+  levels of browser-compatibility that may need to be addressed. I attempt to reduce
+  this to just two levels, whilst introducing my latest JavaScript library: noscript.js'
 author: Ron
 ---
 

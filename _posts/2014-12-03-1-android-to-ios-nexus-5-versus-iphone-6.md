@@ -1,11 +1,11 @@
 ---
+title: 'Android to iOS: Nexus 5 versus iPhone 6'
+date: 2014-12-03 00:00:00 Z
+permalink: "/blog/2014/12/03/1/android-to-ios-nexus-5-versus-iphone-6.html"
 layout: post
-title: "Android to iOS: Nexus 5 versus iPhone 6"
-subtitle: "some thoughts on smartphone hardware"
-date: 2014-12-03
+subtitle: some thoughts on smartphone hardware
 nth: 1
-permalink: /blog/2014/12/03/1/android-to-ios-nexus-5-versus-iphone-6.html
-summary: "Before I get to meat of the subject, I compare the bread."
+summary: Before I get to meat of the subject, I compare the bread.
 author: Ron
 ---
 

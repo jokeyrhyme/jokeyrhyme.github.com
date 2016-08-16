@@ -1,9 +1,9 @@
 ---
-layout: post
 title: Inheritance and the Array Prototype
+date: 2013-05-13 00:00:00 Z
+permalink: "/blog/2013/05/13/1/js_inheritance_and_array_prototype.html"
+layout: post
 subtitle: working around weirdness in JavaScript
-date: 2013-05-13
-permalink: /blog/2013/05/13/1/js_inheritance_and_array_prototype.html
 summary: A quick look at some issues I was having in Node.JS
 author: Ron
 ---

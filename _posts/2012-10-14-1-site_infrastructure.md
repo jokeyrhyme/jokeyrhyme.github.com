@@ -1,10 +1,12 @@
 ---
-layout: post
 title: site infrastructure
+date: 2012-10-14 00:00:00 Z
+permalink: "/blog/2012/10/14/1/site_infrastructure.html"
+layout: post
 subtitle: AWS Route53, EC2 and EBS, oh my!
-date: 2012-10-14
-permalink: /blog/2012/10/14/1/site_infrastructure.html
-summary: In this post, I cover the basic cloud infrastructure I'm using. I also evangelise Amazon Web Services a fair bit. In fairness, ever since Microsoft supported Linux nodes in Azure, I've been pretty tempted to try them out.
+summary: In this post, I cover the basic cloud infrastructure I'm using. I also evangelise
+  Amazon Web Services a fair bit. In fairness, ever since Microsoft supported Linux
+  nodes in Azure, I've been pretty tempted to try them out.
 author: Ron
 ---
 

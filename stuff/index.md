@@ -1,6 +1,6 @@
 ---
-layout: page
 title: stuff
+layout: page
 ---
 
 ## Miscellaneous Stuff! And Things!

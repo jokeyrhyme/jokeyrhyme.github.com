@@ -1,11 +1,12 @@
 ---
+title: Imitating Google Hangouts with CSS Flexbox
+date: 2014-04-23 00:00:00 Z
+permalink: "/blog/2014/04/23/1/imitating-google-hangouts-with-css-flexbox.html"
 layout: post
-title: "Imitating Google Hangouts with CSS Flexbox"
-subtitle: "my attempt at solving a layout issue with CSS Flexbox"
-date: 2014-04-23
+subtitle: my attempt at solving a layout issue with CSS Flexbox
 nth: 1
-permalink: /blog/2014/04/23/1/imitating-google-hangouts-with-css-flexbox.html
-summary: "In this short post, I introduce my CodePen.io profile, and demonstrate how I used CodePen.io to experiment with CSS Flexbox."
+summary: In this short post, I introduce my CodePen.io profile, and demonstrate how
+  I used CodePen.io to experiment with CSS Flexbox.
 author: Ron
 ---
 

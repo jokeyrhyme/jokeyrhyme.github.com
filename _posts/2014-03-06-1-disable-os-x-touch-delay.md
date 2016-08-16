@@ -1,11 +1,12 @@
 ---
+title: 'How-To: Disable OS X''s Touch Delay'
+date: 2014-03-06 00:00:00 Z
+permalink: "/blog/2014/03/06/1/disable-os-x-touch-delay.html"
 layout: post
-title: "How-To: Disable OS X's Touch Delay"
 subtitle: for impatient track-pad users like me
-date: 2014-03-06
 nth: 1
-permalink: /blog/2014/03/06/1/disable-os-x-touch-delay.html
-summary: "Apple's default track-pad settings drive me up the wall. Here's how to fix them. Bandwidth-warning: this post has 1.4MB of screenshots."
+summary: 'Apple''s default track-pad settings drive me up the wall. Here''s how to
+  fix them. Bandwidth-warning: this post has 1.4MB of screenshots.'
 author: Ron
 ---
 

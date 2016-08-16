@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Google announces Chromium WebView
+date: 2013-11-09 00:00:00 Z
+permalink: "/blog/2013/11/09/1/google-announces-chromium-webview.html"
+layout: post
 subtitle: my response to a big change in Android KitKat
-date: 2013-11-09
-permalink: /blog/2013/11/09/1/google-announces-chromium-webview.html
-summary: In this post, I discuss Google's announcement, its impact on hybrid-app developers and possible future improvements. This is a cross-posting of an entry I made on my employer's blog [earlier](http://blinkmobile.com.au/news/blog/218-google-announces-chromium-webview).
+summary: In this post, I discuss Google's announcement, its impact on hybrid-app developers
+  and possible future improvements. This is a cross-posting of an entry I made on
+  my employer's blog [earlier](http://blinkmobile.com.au/news/blog/218-google-announces-chromium-webview).
 author: Ron
 ---
 

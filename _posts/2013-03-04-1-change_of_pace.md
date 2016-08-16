@@ -1,10 +1,11 @@
 ---
-layout: post
 title: change of pace
+date: 2013-03-04 00:00:00 Z
+permalink: "/blog/2013/03/04/1/change_of_pace.html"
+layout: post
 subtitle: interim strategy for this site
-date: 2013-03-04
-permalink: /blog/2013/03/04/1/change_of_pace.html
-summary: Here I detail the current plan for this site and why I changed my mind about it.
+summary: Here I detail the current plan for this site and why I changed my mind about
+  it.
 author: Ron
 ---
 

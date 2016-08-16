@@ -1,9 +1,9 @@
 ---
-layout: post
 title: Samsung Series 3 Chromebook Review
+date: 2013-07-09 00:00:00 Z
+permalink: "/blog/2013/07/09/1/samsung_series_3_chromebook_review.html"
+layout: post
 subtitle: A handy gadget to have on a holiday...
-date: 2013-07-09
-permalink: /blog/2013/07/09/1/samsung_series_3_chromebook_review.html
 summary: I was on holiday in the USA and made an impulsive purchase. :)
 author: Ron
 ---

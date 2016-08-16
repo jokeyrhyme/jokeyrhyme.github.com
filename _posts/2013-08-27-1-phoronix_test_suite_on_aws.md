@@ -1,10 +1,13 @@
 ---
-layout: post
 title: Phoronix Test Suite on AWS
+date: 2013-08-27 00:00:00 Z
+permalink: "/blog/2013/08/27/1/phoronix_test_suite_on_aws.html"
+layout: post
 subtitle: A quick guide to testing performance in the cloud...
-date: 2013-08-27
-permalink: /blog/2013/08/27/1/phoronix_test_suite_on_aws.html
-summary: I am evaluating distributed file systems for use at work, and I need to establish a baseline for performance. This is the first in a series of posts examining some of the simpler solutions for high-availability storage. This guide assumes you are familiar with managing EC2 and EBS resources in Amazon's Web Services.
+summary: I am evaluating distributed file systems for use at work, and I need to establish
+  a baseline for performance. This is the first in a series of posts examining some
+  of the simpler solutions for high-availability storage. This guide assumes you are
+  familiar with managing EC2 and EBS resources in Amazon's Web Services.
 author: Ron
 ---
 

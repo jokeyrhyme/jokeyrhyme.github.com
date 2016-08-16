@@ -1,13 +1,15 @@
 ---
-layout: post
 title: PTS Results on Provisioned IOPS on AWS EBS, Part 2
+date: 2013-09-24 00:00:00 Z
+permalink: "/blog/2013/09/24/1/pts_results_for_piops_on_aws_ebs_part2.html"
+layout: post
 subtitle: More results running PTS with PIOPS 1000 and 2000
-date: 2013-09-24
-permalink: /blog/2013/09/24/1/pts_results_for_piops_on_aws_ebs_part2.html
-summary: Continuing my evaluation of cloud hosted file-systems, I started looking at Provisioned IOPS as offered by AWS. This post is light on instructions and is basically just graphs of performance results.
+summary: Continuing my evaluation of cloud hosted file-systems, I started looking
+  at Provisioned IOPS as offered by AWS. This post is light on instructions and is
+  basically just graphs of performance results.
 author: Ron
 results:
-- caption: "AIO-Stress v0.21: random write"
+- caption: 'AIO-Stress v0.21: random write'
   footer: "&rarr; MB/s, more is better"
   max: 40.95
   rows:
@@ -21,40 +23,40 @@ results:
     score: 15.75
     error: 0.06
   - config: small-attached-ebs-piops1000
-    score: 35.90
+    score: 35.9
     error: 0.47
   - config: small-attached-ebs-piops2000
     score: 40.95
     error: 0.25
-- caption: "Flexible IO Tester v1.57: Intel IOMeter File Server Access Pattern"
+- caption: 'Flexible IO Tester v1.57: Intel IOMeter File Server Access Pattern'
   footer: "&larr; seconds, less is better"
-  max: 7123.30
+  max: 7123.3
   rows:
   - config: small-attached-ebs
     score: 1234.69
     error: 286.56
   - config: small-attached-ebs-piops200
-    score: 7123.30
+    score: 7123.3
     error: 10.69
   - config: small-attached-ebs-piops400
     score: 3567.55
-    error: 5.00
+    error: 5.0
   - config: small-attached-ebs-piops1000
     score: 1469.18
     error: 2.64
   - config: small-attached-ebs-piops2000
     score: 802.62
     error: 1.14
-- caption: "SQLite v3.7.3: 12,500 INSERTs"
+- caption: 'SQLite v3.7.3: 12,500 INSERTs'
   footer: "&larr; seconds, less is better"
-  max: 377.20
+  max: 377.2
   rows:
   - config: small-attached-ebs
     score: 156.35
     error: 3.04
   - config: small-attached-ebs-piops200
-    score: 377.20
-    error: 0.10
+    score: 377.2
+    error: 0.1
   - config: small-attached-ebs-piops400
     score: 188.27
     error: 0.03
@@ -64,26 +66,26 @@ results:
   - config: small-attached-ebs-piops2000
     score: 89.05
     error: 2.02
-- caption: "FS-Mark v3.3: 1000 Files, 1MB Size"
+- caption: 'FS-Mark v3.3: 1000 Files, 1MB Size'
   footer: "&rarr; files/s, more is better"
   max: 33.27
   rows:
   - config: small-attached-ebs
-    score: 27.10
+    score: 27.1
     error: 1.12
   - config: small-attached-ebs-piops200
-    score: 12.60
-    error: 0.00
+    score: 12.6
+    error: 0.0
   - config: small-attached-ebs-piops400
     score: 22.73
     error: 0.03
   - config: small-attached-ebs-piops1000
-    score: 31.70
+    score: 31.7
     error: 0.06
   - config: small-attached-ebs-piops2000
     score: 33.27
     error: 0.09
-- caption: "Dbench v4.0: 1 Client"
+- caption: 'Dbench v4.0: 1 Client'
   footer: "&rarr; MB/s, more is better"
   max: 82.46
   rows:
@@ -102,7 +104,7 @@ results:
   - config: small-attached-ebs-piops2000
     score: 69.69
     error: 1.49
-- caption: "Dbench v4.0: 12 Clients"
+- caption: 'Dbench v4.0: 12 Clients'
   footer: "&rarr; MB/s, more is better"
   max: 128.37
   rows:
@@ -116,12 +118,12 @@ results:
     score: 107.33
     error: 0.03
   - config: small-attached-ebs-piops1000
-    score: 119.30
+    score: 119.3
     error: 0.03
   - config: small-attached-ebs-piops2000
-    score: 126.70
+    score: 126.7
     error: 0.58
-- caption: "Dbench v4.0: 48 Clients"
+- caption: 'Dbench v4.0: 48 Clients'
   footer: "&rarr; MB/s, more is better"
   max: 129.76
   rows:
@@ -140,7 +142,7 @@ results:
   - config: small-attached-ebs-piops2000
     score: 129.03
     error: 0.97
-- caption: "Dbench v4.0: 128 Clients"
+- caption: 'Dbench v4.0: 128 Clients'
   footer: "&rarr; MB/s, more is better"
   max: 123.01
   rows:
@@ -159,7 +161,7 @@ results:
   - config: small-attached-ebs-piops2000
     score: 123.01
     error: 0.66
-- caption: "IOzone v3.405: 8GB Read Performance"
+- caption: 'IOzone v3.405: 8GB Read Performance'
   footer: "&rarr; MB/s, more is better"
   max: 34.89
   rows:
@@ -168,17 +170,17 @@ results:
     error: 0.02
   - config: small-attached-ebs-piops200
     score: 12.77
-    error: 0.00
+    error: 0.0
   - config: small-attached-ebs-piops400
     score: 25.57
-    error: 0.00
+    error: 0.0
   - config: small-attached-ebs-piops1000
     score: 34.86
-    error: 0.20
+    error: 0.2
   - config: small-attached-ebs-piops2000
     score: 34.73
     error: 0.01
-- caption: "IOzone v3.405: 8GB Write Performance"
+- caption: 'IOzone v3.405: 8GB Write Performance'
   footer: "&rarr; MB/s, more is better"
   max: 34.26
   rows:
@@ -190,14 +192,14 @@ results:
     error: 0.15
   - config: small-attached-ebs-piops400
     score: 22.85
-    error: 0.10
+    error: 0.1
   - config: small-attached-ebs-piops1000
     score: 33.66
-    error: 0.00
+    error: 0.0
   - config: small-attached-ebs-piops2000
     score: 34.26
     error: 0.17
-- caption: "Threaded I/O Tester v0.3.3: 64MB Random Read - 32 Threads"
+- caption: 'Threaded I/O Tester v0.3.3: 64MB Random Read - 32 Threads'
   footer: "&rarr; MB/s, more is better"
   max: 122.08
   rows:
@@ -216,7 +218,7 @@ results:
   - config: small-attached-ebs-piops2000
     score: 23.64
     error: 0.15
-- caption: "Threaded I/O Tester v0.3.3: 64MB Random Write - 32 Threads"
+- caption: 'Threaded I/O Tester v0.3.3: 64MB Random Write - 32 Threads'
   footer: "&rarr; MB/s, more is better"
   max: 13.03
   rows:
@@ -225,17 +227,17 @@ results:
     error: 0.41
   - config: small-attached-ebs-piops200
     score: 0.87
-    error: 0.00
+    error: 0.0
   - config: small-attached-ebs-piops400
     score: 1.75
-    error: 0.00
+    error: 0.0
   - config: small-attached-ebs-piops1000
-    score: 4.40
-    error: 0.00
+    score: 4.4
+    error: 0.0
   - config: small-attached-ebs-piops2000
     score: 8.88
     error: 0.02
-- caption: "Compile Bench v0.6: Test: Compile"
+- caption: 'Compile Bench v0.6: Test: Compile'
   footer: "&rarr; MB/s, more is better"
   max: 35.36
   rows:
@@ -243,7 +245,7 @@ results:
     score: 27.87
     error: 0.96
   - config: small-attached-ebs-piops200
-    score: 9.10
+    score: 9.1
     error: 0.03
   - config: small-attached-ebs-piops400
     score: 18.27
@@ -253,8 +255,8 @@ results:
     error: 0.04
   - config: small-attached-ebs-piops2000
     score: 35.35
-    error: 0.00
-- caption: "Compile Bench v0.6: Test: Initial Create"
+    error: 0.0
+- caption: 'Compile Bench v0.6: Test: Initial Create'
   footer: "&rarr; MB/s, more is better"
   max: 28.75
   rows:
@@ -273,7 +275,7 @@ results:
   - config: small-attached-ebs-piops2000
     score: 28.75
     error: 0.15
-- caption: "Compile Bench v0.6: Test: Read Compiled Tree"
+- caption: 'Compile Bench v0.6: Test: Read Compiled Tree'
   footer: "&rarr; MB/s, more is better"
   max: 102.61
   rows:
@@ -290,14 +292,14 @@ results:
     score: 47.89
     error: 0.64
   - config: small-attached-ebs-piops2000
-    score: 49.10
+    score: 49.1
     error: 0.54
-- caption: "Unpacking The Linux Kernel: linux-2.6.32.tar.bz2"
+- caption: 'Unpacking The Linux Kernel: linux-2.6.32.tar.bz2'
   footer: "&larr; seconds, less is better"
   max: 56.25
   rows:
   - config: small-attached-ebs
-    score: 48.80
+    score: 48.8
     error: 1.11
   - config: small-attached-ebs-piops200
     score: 56.25
@@ -306,12 +308,12 @@ results:
     score: 54.11
     error: 1.02
   - config: small-attached-ebs-piops1000
-    score: 51.00
+    score: 51.0
     error: 0.82
   - config: small-attached-ebs-piops2000
     score: 46.48
     error: 0.35
-- caption: "PostMark v1.51: Disk Transaction Performance"
+- caption: 'PostMark v1.51: Disk Transaction Performance'
   footer: "&rarr; TPS, more is better"
   max: 634
   rows:
@@ -323,14 +325,14 @@ results:
     error: 1.96
   - config: small-attached-ebs-piops400
     score: 403
-    error: 2.60
+    error: 2.6
   - config: small-attached-ebs-piops1000
     score: 606
     error: 1.45
   - config: small-attached-ebs-piops2000
     score: 634
     error: 2.33
-- caption: "Gzip Compression: 2GB File Compression"
+- caption: 'Gzip Compression: 2GB File Compression'
   footer: "&larr; seconds, less is better"
   max: 279.83
   rows:
@@ -348,21 +350,21 @@ results:
     error: 1.16
   - config: small-attached-ebs-piops2000
     score: 56.85
-    error: 1.10
-- caption: "PostgreSQL pgbench v8.4.11: TPC-B Transactions Per Second"
+    error: 1.1
+- caption: 'PostgreSQL pgbench v8.4.11: TPC-B Transactions Per Second'
   footer: "&rarr; TPS, more is better"
   max: 335.26
   rows:
   - config: small-attached-ebs
     score: 250.39
-    error: 3.30
+    error: 3.3
   - config: small-attached-ebs-piops1000
     score: 301.47
     error: 4.62
   - config: small-attached-ebs-piops2000
     score: 335.26
     error: 17.91
-- caption: "Apache Benchmark v2.4.3: Static Web Page Serving"
+- caption: 'Apache Benchmark v2.4.3: Static Web Page Serving'
   footer: "&rarr; Requests/s, more is better"
   max: 1233.82
   rows:
@@ -377,7 +379,7 @@ results:
     error: 3.25
   - config: small-attached-ebs-piops1000
     score: 1135.76
-    error: 4.50
+    error: 4.5
   - config: small-attached-ebs-piops2000
     score: 1233.82
     error: 9.55

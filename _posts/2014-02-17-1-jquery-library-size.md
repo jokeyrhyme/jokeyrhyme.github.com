@@ -1,11 +1,13 @@
 ---
-layout: post
 title: jQuery Library Size
+date: 2014-02-17 00:00:00 Z
+permalink: "/blog/2014/02/17/1/jquery-library-size.html"
+layout: post
 subtitle: exploring jQuery's role in web page weight
-date: 2014-02-17
 nth: 1
-permalink: /blog/2014/02/17/1/jquery-library-size.html
-summary: In this post, I look at how jQuery has changed in size over recent versions. I also look at custom builds and how much each unused feature adds to your page weight.
+summary: In this post, I look at how jQuery has changed in size over recent versions.
+  I also look at custom builds and how much each unused feature adds to your page
+  weight.
 author: Ron
 ---
 

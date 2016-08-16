@@ -1,9 +1,10 @@
 ---
+title: Keep Contributing
+date: 2016-02-07 00:00:00 Z
 layout: post
-title: "Keep Contributing"
-subtitle: "http://keepachangelog.com/ but for CONTRIBUTING.md"
-date: 2016-02-07
-summary: "I put together a template for my own use, and felt it could be useful for others."
+subtitle: http://keepachangelog.com/ but for CONTRIBUTING.md
+summary: I put together a template for my own use, and felt it could be useful for
+  others.
 author: Ron
 ---
 

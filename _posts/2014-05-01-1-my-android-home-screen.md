@@ -1,11 +1,12 @@
 ---
+title: My Android Home Screen
+date: 2014-05-01 00:00:00 Z
+permalink: "/blog/2014/05/01/1/my-android-home-screen.html"
 layout: post
-title: "My Android Home Screen"
-subtitle: "and my Lock Screen, too"
-date: 2014-05-01
+subtitle: and my Lock Screen, too
 nth: 1
-permalink: /blog/2014/05/01/1/my-android-home-screen.html
-summary: "This is a quick guide to the most visible apps on my phone. Which ones enjoy prime real estate?"
+summary: This is a quick guide to the most visible apps on my phone. Which ones enjoy
+  prime real estate?
 author: Ron
 ---
 

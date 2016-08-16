@@ -1,11 +1,12 @@
 ---
+title: 'Android to iOS: process and initial thoughts'
+date: 2014-11-25 00:00:00 Z
+permalink: "/blog/2014/11/25/1/android-to-ios-process-and-initial-thoughts.html"
 layout: post
-title: "Android to iOS: process and initial thoughts"
-subtitle: "wherein the tiger changes his stripes"
-date: 2014-11-25
+subtitle: wherein the tiger changes his stripes
 nth: 1
-permalink: /blog/2014/11/25/1/android-to-ios-process-and-initial-thoughts.html
-summary: "I replaced my Nexus 5 with a regular iPhone 6, and have so far lived to tell the tale."
+summary: I replaced my Nexus 5 with a regular iPhone 6, and have so far lived to tell
+  the tale.
 author: Ron
 ---
 

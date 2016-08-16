@@ -1,9 +1,9 @@
 ---
+title: Quick React and redux-bootstrap example
+date: 2016-07-25 00:00:00 Z
 layout: post
-title: "Quick React and redux-bootstrap example"
-subtitle: "quick example combining create-react-app with redux-bootstrap"
-date: 2016-07-25
-summary: "Getting started very fast with React and Redux"
+subtitle: quick example combining create-react-app with redux-bootstrap
+summary: Getting started very fast with React and Redux
 author: Ron
 ---
 

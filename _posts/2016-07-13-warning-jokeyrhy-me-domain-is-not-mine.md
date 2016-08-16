@@ -1,9 +1,9 @@
 ---
+title: 'Warning: jokeyrhy.me domain is not mine'
+date: 2016-07-13 00:00:00 Z
 layout: post
-title: "Warning: jokeyrhy.me domain is not mine"
-subtitle: "Domain lapsed and currently owned by an unaffiliated scraper"
-date: 2016-07-13
-summary: "Learning some lessons about domains and hosting"
+subtitle: Domain lapsed and currently owned by an unaffiliated scraper
+summary: Learning some lessons about domains and hosting
 author: Ron
 ---
 
