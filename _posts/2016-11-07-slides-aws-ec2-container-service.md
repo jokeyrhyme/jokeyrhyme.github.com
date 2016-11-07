@@ -26,3 +26,14 @@ and figured I'd share them in case anyone else found them interesting.
 
 I left some extra thoughts in the slide notes,
 be sure to check those out.
+
+
+## Social Posts
+
+I've cross-posted this on the following social networks, where your comments are welcome:
+
+-   [Twitter](https://twitter.com/jokeyrhyme/status/795531775493619713)
+
+-   [Google+](https://plus.google.com/+RonWaldon/posts/KzP1RC6SPZ5)
+
+-   [LinkedIn](https://www.linkedin.com/hp/update/6201297409205764096)
