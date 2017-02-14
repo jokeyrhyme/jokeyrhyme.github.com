@@ -7,7 +7,7 @@
   "licenses": "BSD 3-Clause",
   "devDependencies": {
     "grunt": "~1.0.1",
-    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-requirejs": "~1.0.0",
     "grunt-contrib-uglify": "~2.1.0",
     "grunt-jqlint": "~0.1",
