@@ -1,8 +1,9 @@
 ---
-title: 'git conflicts and lock files'
+title: git conflicts and lock files
 date: 2017-08-22 00:00:00 Z
 layout: post
-summary: In this post, I discuss dependency lock files, version control, and how I deal with inevitable merge conflicts
+summary: In this post, I discuss dependency lock files, version control, and how I
+  deal with inevitable merge conflicts
 author: Ron
 ---
 
