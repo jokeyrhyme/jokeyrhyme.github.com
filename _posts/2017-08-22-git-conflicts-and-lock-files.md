@@ -112,3 +112,16 @@ These recommendations help make conflict resolution a little less painful, but t
 ### closing remarks
 
 Whilst this approach has been most useful to me for dealing with lock files, I believe this approach is equally useful when applied to other conflicting files that are machine-generated, such as minified or compiled code (if you happen to version such things), or even binary data such as multimedia assets.
+
+
+## feedback
+
+I've cross-posted this on the following social networks, where your comments and questions are welcome:
+
+-   [Twitter](https://twitter.com/jokeyrhyme/status/899950057197195264)
+
+-   [Google+](https://plus.google.com/+RonWaldon/posts/Trd4CPUYGgM)
+
+-   [Facebook](https://www.facebook.com/ron.f.waldon/posts/10155595821712433)
+
+-   [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6305715722291159040)
