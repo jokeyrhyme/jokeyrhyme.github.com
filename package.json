@@ -10,7 +10,7 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-requirejs": "~1.0.0",
     "grunt-contrib-uglify": "~4.0.0",
-    "grunt-jqlint": "~0.1",
+    "grunt-jqlint": "~0.1.2",
     "grunt-jslint": "~1.2.0"
   }
 }
